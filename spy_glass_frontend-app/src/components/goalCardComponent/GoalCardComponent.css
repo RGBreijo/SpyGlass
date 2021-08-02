@@ -1,0 +1,68 @@
+.goalCard{
+  max-width: 550px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.goalCard h2{
+    color: #334365;
+}
+
+.goalCardInnerSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.goalDescription
+{
+    color: #B0BAD2;
+    width: 300px;
+    font-weight: bold;
+}
+
+
+/* total width of progress bar is 35 em
+   width will grow / shrink on both depneding on progress. 
+*/
+.progressBar
+{
+    display: flex;
+}
+
+.progressBarFinish
+{
+    background-color: rgb(200, 215, 224);
+    width: 30em;
+    height: 1em;
+    border-radius: 0 5px 5px 0px;
+}
+
+.progressBarCurrent
+{
+    width: 5em;
+    height: 1em;
+    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
+    background-color: #03D482;;
+}
+
+
+
+.priceContainer
+{
+    color: #B0BAD2;
+
+    display: flex;
+    justify-content: space-between;
+    width: 34em;
+}
+
+.cardAchieveContainer p
+{
+    font-size: 0.7em;
+    color: #B0BAD2;
+}

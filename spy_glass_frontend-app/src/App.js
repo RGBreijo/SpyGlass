@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import GoalCardComponent from "./components/goalCardComponent/GoalCardComponent"
-
+import GoalContainer from "./components/goalContainerComponent/GoalContainer"
 function App() {
   return (
     <div>
       <div>
-      <GoalCardComponent></GoalCardComponent>
-      <GoalCardComponent></GoalCardComponent>
+        <GoalContainer></GoalContainer>
       </div>
     </div>
   );

@@ -1,12 +1,18 @@
 .goalCard{
-  max-width: 550px;
+  max-width: 420px;
+  max-height: 233px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  padding: 1em;
+  padding: 0.5em 1em 1em 1em;
   border-radius: 5px;
+  background-color: white;
+  margin-bottom: 1em;
 }
+
 
 .goalCard h2{
     color: #334365;
+
+    margin: 0;
 }
 
 .goalCardInnerSection{
@@ -20,8 +26,10 @@
 .goalDescription
 {
     color: #B0BAD2;
-    width: 300px;
+    width: 230px;
     font-weight: bold;
+    font-size: 0.7em;
+
 }
 
 
@@ -55,14 +63,16 @@
 .priceContainer
 {
     color: #B0BAD2;
-
     display: flex;
     justify-content: space-between;
-    width: 34em;
+    height: 40px;
+    margin-bottom: -0.5em;
+
 }
 
 .cardAchieveContainer p
 {
+
     font-size: 0.7em;
     color: #B0BAD2;
 }

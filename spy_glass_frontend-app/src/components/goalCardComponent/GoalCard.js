@@ -1,6 +1,6 @@
-import "./GoalCardComponent.css"
+import "./GoalCard.css"
 
-const GoalCardComponent = () => 
+const GoalCard = () => 
 {
     return (
         <div className="goalCard">
@@ -14,7 +14,7 @@ const GoalCardComponent = () =>
                         </p>
                     </div>
                     <div>
-                        <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg" height="134px" width="200"></img>
+                        <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"  width="160" height="100"></img>
                     </div>
                 </div>
 
@@ -40,4 +40,4 @@ const GoalCardComponent = () =>
 }
 
 
-export default GoalCardComponent; 
+export default GoalCard; 

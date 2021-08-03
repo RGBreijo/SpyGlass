@@ -1,0 +1,22 @@
+.goalContainerTop
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.goalContainerTop div
+{
+    /* padding-bottom: 1em;
+    background-color: blue; */
+}
+
+.goalContainer{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 1em 1em 1em;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 1em;
+    max-width: 60em;
+    flex-wrap: wrap;
+}

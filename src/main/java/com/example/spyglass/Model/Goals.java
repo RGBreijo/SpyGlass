@@ -6,8 +6,8 @@ import java.util.Date;
 
 @Entity
 public class Goals {
-    private String reason;
     private String goalName;
+    private String reason;
     private Date targetDate;
     private int target$Amount;
     private int currentGoal;
@@ -22,7 +22,7 @@ public class Goals {
     public Goals() {
     }
 
-    public Goals(String reason, String goalName, Date targetDate, int target$Amount, int currentGoal, int initDeposit, int priority, User user, Long goalId) {
+    public Goals(String goalName, String reason, Date targetDate, int target$Amount, int currentGoal, int initDeposit, int priority, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;

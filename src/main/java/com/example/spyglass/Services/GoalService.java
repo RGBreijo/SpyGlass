@@ -47,10 +47,12 @@ public class GoalService {
         throw new GoalNotFoundException(id);
     }
 
-    public void updateGoal(Long id, Optional<Goals> updatedGoal) throws GoalNotFoundException{
+    public Boolean updateGoal(Long id, Goals updatedGoal) throws GoalNotFoundException{
         if (goalsRepo.existsById(id)){
-            Optional<Goals> oldGoal = goalsRepo.findById(id);
-             oldGoal = updatedGoal;
+             deleteGoal(id);
+             goalsRepo.save(updatedGoal);
+             return true;
         }
+        return false;
     }
 }

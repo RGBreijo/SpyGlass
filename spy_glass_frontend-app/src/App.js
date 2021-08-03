@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import GoalContainer from "./components/goalContainerComponent/GoalContainer"
 import Deposit from "./components/depositComponent/Deposit"
-
+import Boost from "./components/boostComponent/Boost"
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       </div>
       <div>
         <GoalContainer></GoalContainer>
+        <Boost></Boost>
       </div>
     </div>
   );

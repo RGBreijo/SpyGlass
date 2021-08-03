@@ -21,9 +21,10 @@ public class GoalService {
     }
 
     public Goals creatGoal(Goals newGoal) throws GoalAlreadyExistsExeption {
+        if (newGoal.getGoalId() != null){
         if (goalsRepo.existsById(newGoal.getGoalId())){
             throw new GoalAlreadyExistsExeption(newGoal.getGoalId());
-        }
+        }}
         return goalsRepo.save(newGoal);
     }
 
@@ -47,12 +48,24 @@ public class GoalService {
         throw new GoalNotFoundException(id);
     }
 
+    public Boolean clearGoals(){
+        goalsRepo.deleteAll();
+        return true;
+    }
     public Boolean updateGoal(Long id, Goals updatedGoal) throws GoalNotFoundException{
+        Goals oldGoal = goalsRepo.findById(id).orElse(null);
+        if (oldGoal != null){
         if (goalsRepo.existsById(id)){
-             deleteGoal(id);
-             goalsRepo.save(updatedGoal);
+             oldGoal.setGoalName(updatedGoal.getGoalName());
+             oldGoal.setReason(updatedGoal.getReason());
+             oldGoal.setCurrentGoal(updatedGoal.getCurrentGoal());
+             oldGoal.setPriority(updatedGoal.getPriority());
+             oldGoal.setTarget$Amount(updatedGoal.getTarget$Amount());
+             oldGoal.setInitDeposit(updatedGoal.getCurrentGoal());
+             oldGoal.setTargetDate(updatedGoal.getTargetDate());
+             goalsRepo.save(oldGoal);
              return true;
-        }
+        }}
         return false;
     }
 }

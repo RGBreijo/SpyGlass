@@ -22,7 +22,8 @@ public class Goals {
     public Goals() {
     }
 
-    public Goals(String goalName,String reason, Date targetDate, int target$Amount, int currentGoal, int initDeposit, int priority, User user, Long goalId) {
+    //Add to constructure
+    public Goals(String goalName,String reason, Date targetDate, int target$Amount, int currentGoal, User user, int initDeposit, int priority, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;

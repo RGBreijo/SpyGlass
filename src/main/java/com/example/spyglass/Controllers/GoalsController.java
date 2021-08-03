@@ -19,31 +19,37 @@ public class GoalsController {
     public GoalsController(GoalService goalService){
         this.goalService = goalService;
     }
-    @PostMapping("/username/goal")
+    @PostMapping("/{username}")
     @CrossOrigin
-    public Goals creatGoal(Goals newGoal) throws GoalAlreadyExistsExeption {
+    public Goals creatGoal(@RequestBody Goals newGoal) throws GoalAlreadyExistsExeption {
+        System.out.println(newGoal.getGoalName());
         return goalService.creatGoal(newGoal);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     @CrossOrigin
     public List<Goals> getAllGoals() {
         return goalService.getAllGoals();
     }
 
-    @GetMapping(value = "/username/{goalId}")
+    @GetMapping(value = "/{username}/{goalId}")
     @CrossOrigin
     public Goals findGoal(@PathVariable Long goalId) throws GoalNotFoundException {
         return goalService.findGoal(goalId);
     }
 
-   @DeleteMapping("/username/delete/{goalId}")
+   @DeleteMapping("/{username}/delete/{goalId}")
    @CrossOrigin
    public Boolean deleteGoal(@PathVariable Long goalId) throws GoalNotFoundException{
         return goalService.deleteGoal(goalId);
    }
+    @DeleteMapping("/{username}/delete")
+    @CrossOrigin
+    public Boolean clearGoals(){
+        return goalService.clearGoals();
+    }
 
-   @PutMapping("/username/update/{goalId}")
+   @PutMapping("/{username}/update/{goalId}")
     @CrossOrigin
     public Boolean updateGoal(@PathVariable Long goalId, @RequestBody Goals updatedGoal) throws GoalNotFoundException{
         return goalService.updateGoal(goalId,updatedGoal);

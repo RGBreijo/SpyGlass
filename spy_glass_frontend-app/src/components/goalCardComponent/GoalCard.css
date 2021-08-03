@@ -42,7 +42,8 @@
 
 .progressBarFinish
 {
-    background-color: rgb(200, 215, 224);
+    background-color: #E2F3FC;
+
     width: 30em;
     height: 1em;
     border-radius: 0 5px 5px 0px;
@@ -74,6 +75,7 @@
 
     font-size: 0.7em;
     color: #B0BAD2;
+    
 }
 
 

@@ -5,20 +5,21 @@
     flex-wrap: wrap;
 }
 
-.goalContainerTop div
+.mainGoalContent
 {
-    /* padding-bottom: 1em;
-    background-color: blue; */
+    padding: 0 1em 1em 1em;
 }
 
 .goalContainer{
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-    padding: 0 1em 1em 1em;
+    /* padding: 0 1em 1em 1em; */
     border-radius: 5px;
     background-color: white;
     margin-bottom: 1em;
     max-width: 60em;
     flex-wrap: wrap;
+    overflow: scroll;
+    min-width: 290px;
 }
 
 #totalSavedContainer p, #totalSavedContainer h3{
@@ -48,17 +49,9 @@
 }
 
 
-
-
-
  @media only screen and (max-width: 1500px) {
     .goalContainer
     {
-        max-width: 55vw;
+        max-width: 65vw;
     } 
-
-    
-     
-    
-
   }

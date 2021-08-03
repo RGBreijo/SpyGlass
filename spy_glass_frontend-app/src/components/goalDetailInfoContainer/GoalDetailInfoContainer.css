@@ -2,6 +2,16 @@ table
 {
     border-collapse: collapse;
     width: 100%;
+    overflow: scroll;
+    /* min-width: 700px; */
+    min-width: 290px;
+
+}
+
+.tableContainer
+{
+    min-width: 300px;
+    overflow: scroll;
 }
 
 .goalTable th

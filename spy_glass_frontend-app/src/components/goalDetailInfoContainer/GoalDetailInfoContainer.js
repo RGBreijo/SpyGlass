@@ -5,7 +5,7 @@ const GoalDetailINfoContainer = () =>
     
     return(
         <div>
-            <div>
+            <div className="tableContainer">
                 <table className="goalTable">
 
                     <tr className="goalDetailTableHeader">

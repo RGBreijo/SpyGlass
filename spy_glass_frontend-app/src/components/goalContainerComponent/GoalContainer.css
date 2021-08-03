@@ -20,3 +20,45 @@
     max-width: 60em;
     flex-wrap: wrap;
 }
+
+#totalSavedContainer p, #totalSavedContainer h3{
+    padding: 0;
+    margin: 0;
+    color: #334365;
+}
+#totalSavedContainer h3
+{
+    padding-bottom: 0.5em;
+}
+
+#totalSavedContainer p
+{
+    font-size: 0.5em;
+    padding-bottom: 3em;
+}
+
+#yourGoal
+{
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+
+    color: #334365;
+}
+
+
+
+
+
+ @media only screen and (max-width: 1500px) {
+    .goalContainer
+    {
+        max-width: 55vw;
+    } 
+
+    
+     
+    
+
+  }

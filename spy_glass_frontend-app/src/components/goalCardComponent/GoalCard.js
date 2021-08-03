@@ -13,8 +13,9 @@ const GoalCard = () =>
                         upstairs neighbors 
                         </p>
                     </div>
-                    <div>
-                        <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"  width="160" height="100"></img>
+                    <div clasName="goalImage">
+                        <br></br>
+                        <img alt="goal" src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"></img>
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 .goalCard{
-  max-width: 420px;
-  max-height: 233px;
+  max-width: 45%;
+  min-width: 280px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 0.5em 1em 1em 1em;
   border-radius: 5px;
@@ -11,7 +11,6 @@
 
 .goalCard h2{
     color: #334365;
-
     margin: 0;
 }
 
@@ -76,3 +75,66 @@
     font-size: 0.7em;
     color: #B0BAD2;
 }
+
+
+img
+{
+    width: 160px;
+    height: 100px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1500px) 
+{
+
+
+    .goalCard{
+        max-width: 45%;
+        max-height: 160px;
+      }
+   
+
+    img
+    {
+        width: 120px;
+        height: 70px;
+
+    }
+
+    .goalDescription
+    {
+        max-width: 60%;
+        height: 80px;
+    }
+
+
+
+    .priceContainer
+    {
+
+        padding: 0;
+        color: #B0BAD2;
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        font-size: 0.6em;
+    }
+    
+
+    .cardAchieveContainer p
+    {
+        font-size: 0.6em;
+        color: #B0BAD2;
+    }
+
+    .goalImage{
+            background-color: blue;
+    }
+
+
+     
+    
+  }

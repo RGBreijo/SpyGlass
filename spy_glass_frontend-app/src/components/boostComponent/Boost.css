@@ -3,20 +3,31 @@
 {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     padding: 1em;
-    /* /* border-radius: 5px; */
+    border-radius: 5px; 
     background-color: white;
     margin-bottom: 1em;
     
     width: 33vw;
     max-width: 250px;
-    height: 27em;
+    height: 33em;
     flex-wrap: wrap;
+}
+
+.boostFootnote
+{
+    color: #6E6E6E;
 }
 
 .boostDescription
 {
     color: #434041;
     font-size: 0.7em;
+}
+
+.footNoteHighlight
+{
+    color: #E14A4A;
+    font-weight: bold;
 }
 
 .boostContainer h2
@@ -43,6 +54,11 @@
 {
     display: flex;
     justify-content: center;
+}
+
+.boostSubmitContainer input:hover
+{
+   background-color: rgb(209, 61, 68);;
 }
 
 .boostSubmitContainer input
@@ -74,4 +90,17 @@
     padding: 0.5em;
     border-color: #E0E0E1;
 
+}
+
+
+.buyDescriptionContainer p
+{
+    margin: 0;
+}
+
+.buyDescriptionNote
+{
+    font-size: 0.6em;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
 }

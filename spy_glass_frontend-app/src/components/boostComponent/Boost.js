@@ -15,7 +15,7 @@ const Boost = () =>
                     <div className="boostProperties">
                         <label>Choose an ETF</label>
                         <select id="cars" name="cars">
-                            <option value="volvo">Volvo XC90</option>
+                            <option value="volvo">Extended Duration Treasury $143.56</option>
                             <option value="saab">Saab 95</option>
                             <option value="mercedes">Mercedes SLK</option>
                             <option value="audi">Audi TT</option>
@@ -24,20 +24,26 @@ const Boost = () =>
                     
                     <div className="boostProperties">
                         <label for="etf" >Quantity</label>
-                        <input type="text" placeholder="hello world"/>
+                        <input type="text" placeholder="1"/>
                     </div>
                     <div className="boostProperties"> 
                         <label>Choose a goal</label>
                         <select id="cars" name="cars">
-                            <option value="volvo">Volvo XC90</option>
-                            <option value="saab">Saab 95</option>
-                            <option value="mercedes">Mercedes SLK</option>
-                            <option value="audi">Audi TT</option>
+                            <option value="volvo">House</option>
+                            <option value="saab">Car</option>
+                            <option value="mercedes">Vacation</option>
+                            <option value="audi">Iphone</option>
                         </select>
                     </div>
 
-                    <div>
-                        <p> Estimated price: $199</p>
+                    <div className="boostFootnote">
+                        <p> With an average yearly return of <span className="footNoteHighlight"> 10% </span>you will achieve 
+                            your house goal <span className="footNoteHighlight"> 1 year </span> sooner.* </p>
+                    </div>
+
+                    <div className="buyDescriptionContainer">
+                        <p>Estimated Total: $200</p>
+                        <p className="buyDescriptionNote">Based on current market price</p>
                     </div>
 
 
@@ -46,8 +52,6 @@ const Boost = () =>
                     </div>
 
                 </div>
-
-              
                 </form>
         </div>
     )

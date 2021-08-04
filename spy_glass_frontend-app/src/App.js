@@ -19,7 +19,11 @@ function App() {
         <div className="mainGoalInfoContainer">
           <GoalContainer></GoalContainer>
         </div>
+
+
       </div>
+
+      <footer></footer>
 
 
 

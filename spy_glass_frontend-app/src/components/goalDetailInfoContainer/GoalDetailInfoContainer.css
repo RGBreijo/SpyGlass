@@ -8,6 +8,18 @@ table
 
 }
 
+/* selecting tr for the padding was not working so did on each element  */
+.itemAtStart
+{
+    padding-left: 1em;
+}
+
+.itemAtend
+{
+    padding-right: 1em;
+}
+
+
 .tableContainer
 {
     min-width: 300px;

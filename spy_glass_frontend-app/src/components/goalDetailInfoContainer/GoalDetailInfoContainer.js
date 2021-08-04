@@ -17,37 +17,37 @@ const GoalDetailINfoContainer = () =>
                         <th>Monthly Deposit</th>
                         <th>On Track</th>
                     </tr>
-        
+           
                     <tr>
-                        <td>House</td>
+                        <td className="itemAtStart">House</td>
                         <td>July 2027</td>
                         <td>$20,000.00</td>
                         <td>$300,000.00</td>
                         <td>$280,000.00</td>
                         <td>$1,000.00</td>
-                        <td>True</td>
+                        <td className="itemAtEnd">True</td>
                     </tr>
 
        
 
                     <tr>
-                        <td>House</td>
+                        <td className="itemAtStart">House</td>
                         <td>July 2027</td>
                         <td>$20,000.00</td>
                         <td>$300,000.00</td>
                         <td>$280,000.00</td>
                         <td>$1,000.00</td>
-                        <td>True</td>
+                        <td className="itemAtEnd"> True</td>
                     </tr>
 
                     <tr>
-                        <td>House</td>
+                        <td className="itemAtStart">House</td>
                         <td>July 2027</td>
                         <td>$20,000.00</td>
                         <td>$300,000.00</td>
                         <td>$280,000.00</td>
                         <td>$1,000.00</td>
-                        <td>True</td>
+                        <td className="itemAtEnd">True</td>
                     </tr>
 
        

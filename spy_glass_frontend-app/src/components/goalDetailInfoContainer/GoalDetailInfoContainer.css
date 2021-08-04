@@ -32,7 +32,7 @@ table
     padding-left: 1em;
     margin: 0;
     padding: 0.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .goalTable td{
@@ -45,6 +45,7 @@ table
 
 .goalDetailTableHeader
 {
+
     background-color: #F2F1F1;
 }
 

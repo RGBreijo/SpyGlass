@@ -7,7 +7,7 @@ import Boost from "./components/boostComponent/Boost"
 function App() {
   return (
     <div>
-      <div>
+      <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>
       </div>
       <div className="mainContentContainer">

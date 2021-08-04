@@ -8,12 +8,23 @@ function App() {
   return (
     <div>
       <div>
-        <Deposit></Deposit>
+        <h2>Welcome back, Bob.</h2>
       </div>
-      <div>
-        <GoalContainer></GoalContainer>
-        <Boost></Boost>
+      <div className="mainContentContainer">
+        <div className="sideInputContainer">
+          <Deposit></Deposit>
+          <Boost></Boost>
+        </div>
+
+        <div className="mainGoalInfoContainer">
+          <GoalContainer></GoalContainer>
+        </div>
       </div>
+
+
+
+
+
     </div>
   );
 }

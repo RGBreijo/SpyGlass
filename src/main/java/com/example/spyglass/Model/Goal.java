@@ -1,36 +1,40 @@
 package com.example.spyglass.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
-public class Goal {
-    private String goalName;
-    private String reason;
-    private Date targetDate;
-    private int target$Amount;
-    private int currentGoal;
-    private int initDeposit;
-    private int priority;
-    @ManyToOne()
-    private User user;
+public class Goal
+{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long goalId;
+
+    private String goalName;
+    private String reason;
+    private Date targetDate;
+
+    private double targetAmount;
+    private double initialDeposit;
+
+    @JsonIgnore
+    @ManyToOne()
+    private User user;
 
     public Goal()
     {
     }
 
-    public Goal(String goalName, String reason, Date targetDate, int target$Amount, int currentGoal, User user, int initDeposit, int priority, Long goalId) {
+    public Goal(String goalName, String reason, Date targetDate, double target$Amount, User user, double initialDeposit, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;
-        this.target$Amount = target$Amount;
-        this.currentGoal = currentGoal;
-        this.initDeposit = initDeposit;
-        this.priority = priority;
+        this.targetAmount = target$Amount;
+        this.initialDeposit = initialDeposit;
         this.user = user;
         this.goalId = goalId;
     }
@@ -59,36 +63,21 @@ public class Goal {
         this.targetDate = targetDate;
     }
 
-    public int getTarget$Amount() {
-        return target$Amount;
+    public double getTargetAmount() {
+        return targetAmount;
     }
 
-    public void setTarget$Amount(int target$Amount) {
-        this.target$Amount = target$Amount;
+    public void setTargetAmount(double target$Amount) {
+        this.targetAmount = target$Amount;
     }
 
-    public int getCurrentGoal() {
-        return currentGoal;
+
+    public double getInitialDeposit() {
+        return initialDeposit;
     }
 
-    public void setCurrentGoal(int currentGoal) {
-        this.currentGoal = currentGoal;
-    }
-
-    public int getInitDeposit() {
-        return initDeposit;
-    }
-
-    public void setInitDeposit(int initDeposit) {
-        this.initDeposit = initDeposit;
-    }
-
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
+    public void setInitialDeposit(double initDeposit) {
+        this.initialDeposit = initDeposit;
     }
 
     public User getUser() {

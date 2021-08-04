@@ -3,6 +3,8 @@ package com.example.spyglass.Model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 
 @Entity
@@ -11,19 +13,19 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-    private String Username;
+    private String username;
     private String email;
     private String password;
     private int points;
 
-    //@OneToMany(mappedBy = "user")
-    //private List<Goals> goals;
+    @OneToMany(mappedBy = "user")
+    private List<Goal> goals;
 
     public User() {
     }
 
     public User(String Username, Long id, String email, String password,int points) {
-        this.Username = Username;
+        this.username = Username;
         this.id = id;
         this.email = email;
         this.password = password;
@@ -33,7 +35,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + Username + '\'' +
+                ", name='" + username + '\'' +
                 ", email=" +  email+
                 ", password=" + password +
                 ", points=" + points +
@@ -48,11 +50,11 @@ public class User {
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getEmail() {
@@ -77,5 +79,15 @@ public class User {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public List<Goal> getGoals()
+    {
+        return goals;
+    }
+
+    public void setGoals(List<Goal> goals)
+    {
+        this.goals = goals;
     }
 }

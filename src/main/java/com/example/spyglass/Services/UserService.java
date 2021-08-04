@@ -23,10 +23,21 @@ public class UserService
         return userRepository.findAll();
     }
 
+
+    public void save(User user)
+    {
+        userRepository.save(user);
+    }
     public User getUser(Long id)
     {
         return userRepository.findById(id).orElse(null);
     }
+
+    public User getUser(String username)
+    {
+        return userRepository.findByUsername(username);
+    }
+
 
     public User createUser(User user)
     {

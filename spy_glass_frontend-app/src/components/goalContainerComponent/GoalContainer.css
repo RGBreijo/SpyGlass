@@ -20,6 +20,8 @@
     flex-wrap: wrap;
     overflow: scroll;
     min-width: 290px;
+
+    /* background-color: blue; */
 }
 
 #totalSavedContainer p, #totalSavedContainer h3{

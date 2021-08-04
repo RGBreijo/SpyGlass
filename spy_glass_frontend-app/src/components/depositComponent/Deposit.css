@@ -49,6 +49,11 @@
     border-color: #E0E0E1;
 
 }
+.depositSubmit input:hover
+{
+    background-color: rgb(209, 61, 68);
+}
+
 .depositeUserDate label
 {
     display: block;

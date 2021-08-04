@@ -1,64 +1,42 @@
 package com.example.spyglass.Services;
 
 import com.example.spyglass.Model.User;
-import com.example.spyglass.Repository.UserRepository;
-import com.example.spyglass.Exceptions.InvalidUserException;
+import com.example.spyglass.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class UserService {
-    @Autowired
-    UserRepository userRepository;
+public class UserService
+{
+    private final UserRepository userRepository;
 
-    public User createUser(User user) {
-        return userRepository.save(user);
+    @Autowired
+    public UserService(UserRepository userRepository)
+    {
+        this.userRepository = userRepository;
     }
 
-    public List<User> getAllUsers(){
+    public List<User> getAllUsers()
+    {
         return userRepository.findAll();
     }
 
-    public void deleteAllUsers () {
-        userRepository.deleteAll();
+    public User getUser(Long id)
+    {
+        return userRepository.findById(id).orElse(null);
     }
 
-
-
-//
-//    public void setBudget(Long userID, double budget) {
-//        Optional<User> myUser = userRepository.findById(userID);
-//
-//        if (!myUser.isPresent()) {
-//            throw new InvalidUserException(""+userID);
-//        }
-//        User foundUser = myUser.get();
-//        foundUser.setBudget(budget);
-//        userRepository.save(foundUser);
-//    }
-//
-//    public void setSavingsGoal(Long userID, double savingsGoal) {
-//        Optional<User> myUser = userRepository.findById(userID);
-//
-//        if (!myUser.isPresent()) {
-//            throw new InvalidUserException(""+userID);
-//        }
-//        User foundUser = myUser.get();
-//        foundUser.setSavingsGoal(savingsGoal);
-//        userRepository.save(foundUser);
-//    }
-//
-//    public double getSavingsGoal(Long userID) {
-//        Optional<User> myUser = userRepository.findById(userID);
-//
-//        if (!myUser.isPresent()) {
-//            throw new InvalidUserException(""+userID);
-//        }
-//        User foundUser = myUser.get();
-//        return foundUser.getSavingsGoal();
+    public User createUser(User user)
+    {
+        return userRepository.save(user);
     }
+
+    public void deleteUser (Long id)
+    {
+        userRepository.deleteById(id);
+    }
+}
 
 

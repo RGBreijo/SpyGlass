@@ -11,10 +11,10 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-    String Username;
-    String email;
+    private String Username;
+    private String email;
     private String password;
-    int points;
+    private int points;
 
     //@OneToMany(mappedBy = "user")
     //private List<Goals> goals;

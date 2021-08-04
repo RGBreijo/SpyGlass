@@ -1,0 +1,77 @@
+
+.boostContainer
+{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    /* /* border-radius: 5px; */
+    background-color: white;
+    margin-bottom: 1em;
+    
+    width: 33vw;
+    max-width: 250px;
+    height: 27em;
+    flex-wrap: wrap;
+}
+
+.boostDescription
+{
+    color: #434041;
+    font-size: 0.7em;
+}
+
+.boostContainer h2
+{
+    font-size: 1em;
+    color: #434041;
+}
+
+.boostProperties
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.boostProperties label
+{
+    margin-bottom: 0.5em;
+}
+
+/* put into one  */
+
+.boostSubmitContainer
+{
+    display: flex;
+    justify-content: center;
+}
+
+.boostSubmitContainer input
+{
+    background-color: #BE3038;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.boostProperties select
+{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5em;
+    border-color: #E0E0E1;
+}
+.boostProperties input
+{
+    width: 100%;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5em;
+    border-color: #E0E0E1;
+
+}

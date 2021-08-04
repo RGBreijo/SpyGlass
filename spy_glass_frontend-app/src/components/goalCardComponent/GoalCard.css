@@ -1,0 +1,142 @@
+.goalCard{
+  max-width: 45%;
+  min-width: 280px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5em 1em 1em 1em;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+
+.goalCard h2{
+    color: #334365;
+    margin: 0;
+}
+
+.goalCardInnerSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.goalDescription
+{
+    color: #B0BAD2;
+    width: 230px;
+    font-weight: bold;
+    font-size: 0.7em;
+
+}
+
+
+/* total width of progress bar is 35 em
+   width will grow / shrink on both depneding on progress. 
+*/
+.progressBar
+{
+    display: flex;
+}
+
+.progressBarFinish
+{
+    background-color: #E2F3FC;
+
+    width: 30em;
+    height: 1em;
+    border-radius: 0 5px 5px 0px;
+}
+
+.progressBarCurrent
+{
+    width: 5em;
+    height: 1em;
+    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
+    background-color: #03D482;;
+}
+
+
+
+.priceContainer
+{
+    color: #B0BAD2;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: -0.5em;
+
+}
+
+.cardAchieveContainer p
+{
+
+    font-size: 0.7em;
+    color: #B0BAD2;
+    
+}
+
+
+img
+{
+    width: 160px;
+    height: 100px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1500px) 
+{
+
+
+    .goalCard{
+        max-width: 45%;
+        max-height: 160px;
+      }
+   
+
+    img
+    {
+        width: 120px;
+        height: 70px;
+
+    }
+
+    .goalDescription
+    {
+        max-width: 60%;
+        height: 80px;
+    }
+
+
+
+    .priceContainer
+    {
+
+        padding: 0;
+        color: #B0BAD2;
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        font-size: 0.6em;
+    }
+    
+
+    .cardAchieveContainer p
+    {
+        font-size: 0.6em;
+        color: #B0BAD2;
+    }
+
+    .goalImage{
+            background-color: blue;
+    }
+
+
+     
+    
+  }

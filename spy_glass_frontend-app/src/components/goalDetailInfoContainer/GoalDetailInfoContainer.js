@@ -50,7 +50,7 @@ const GoalDetailINfoContainer = () =>
                         <td>$300,000.00</td>
                         <td>$280,000.00</td>
                         <td>$1,000.00</td>
-                        <td className="itemAtEnd onTrack">False</td>
+                        <td className="itemAtEnd onTrack">True</td>
                     </tr>
 
 
@@ -71,7 +71,7 @@ const GoalDetailINfoContainer = () =>
                         <td>$300,000.00</td>
                         <td>$280,000.00</td>
                         <td>$1,000.00</td>
-                        <td className="itemAtEnd onTrack">False</td>
+                        <td className="itemAtEnd onTrack">True</td>
                     </tr>
 
                     <tr>

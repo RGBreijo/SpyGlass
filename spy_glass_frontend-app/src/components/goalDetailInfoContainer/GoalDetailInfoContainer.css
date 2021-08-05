@@ -2,7 +2,7 @@ table
 {
     border-collapse: collapse;
     width: 100%;
-    overflow: scroll;
+
     /* min-width: 700px; */
     min-width: 290px;
 
@@ -23,8 +23,12 @@ table
 .tableContainer
 {
     min-width: 300px;
+    max-height: 300px;
     overflow: scroll;
+
+
 }
+
 
 .goalTable th
 {
@@ -35,6 +39,8 @@ table
     font-size: 0.8em;
 }
 
+
+
 .goalTable td{
 
     text-align: center;
@@ -43,9 +49,9 @@ table
     border-bottom: 1px solid #E8E7E7;
 }
 
-.goalDetailTableHeader
+.goalDetailTableHeader th
 {
-
+    /* position:absolute; */
     background-color: #F2F1F1;
 }
 
@@ -60,3 +66,26 @@ table
     color: #C85B6D;
 
 }
+
+
+th:not([scope=row]) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+
+
+
+/* making table sticky  */
+/* th {
+    position: sticky;
+    background-color: blue;
+  }
+
+  table {
+
+    position: relative;
+
+  } */

@@ -23,6 +23,7 @@ const GoalContainer = () =>
                 <GoalCard></GoalCard>
                 <GoalCard></GoalCard>
                 <GoalCard></GoalCard>
+                <GoalCard></GoalCard>
                 </div>
             </div>
 

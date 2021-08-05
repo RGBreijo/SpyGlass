@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    overflow: scroll;
+    max-height: 540px;
 }
 
 .mainGoalContent
@@ -58,4 +60,9 @@
     {
         max-width: 65vw;
     } 
+    .goalContainerTop
+    {
+        max-height: 400px;
+    }
+
   }

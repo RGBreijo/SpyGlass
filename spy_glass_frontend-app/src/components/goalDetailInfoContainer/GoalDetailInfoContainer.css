@@ -75,17 +75,3 @@ th:not([scope=row]) {
     z-index: 2;
   }
 
-
-
-
-/* making table sticky  */
-/* th {
-    position: sticky;
-    background-color: blue;
-  }
-
-  table {
-
-    position: relative;
-
-  } */

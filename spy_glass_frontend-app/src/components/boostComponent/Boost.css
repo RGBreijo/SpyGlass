@@ -70,6 +70,7 @@
     padding: 0.5em;
     border-radius: 5px;
     width: 100px;
+    cursor: pointer;
 }
 
 .boostProperties select
@@ -89,7 +90,7 @@
     border-width: 1px;
     padding: 0.5em;
     border-color: #E0E0E1;
-
+    
 }
 
 

@@ -126,14 +126,10 @@ input[type="file"]
     background-color: #FFFFFF;
     border: 1px solid #A8A9A8;
     font-size: 1em;
+    cursor: pointer;
 }
 
-#createCancelBtn:hover
-{
-    background-color: rgb(237, 238, 237);
-    color: black;
-    border-color: rgb(237, 238, 237);
-}
+
 
 #createSaveBtn
 {
@@ -141,6 +137,7 @@ input[type="file"]
     font-size: 1em;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 

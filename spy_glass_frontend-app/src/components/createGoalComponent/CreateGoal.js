@@ -46,7 +46,7 @@ const CreateGoal = () =>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="descriptionContainer">
                         <label>Description</label>
                         <textarea></textarea>
                     </div>

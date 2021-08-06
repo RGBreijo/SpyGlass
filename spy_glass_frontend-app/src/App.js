@@ -3,6 +3,7 @@ import './App.css';
 import GoalContainer from "./components/goalContainerComponent/GoalContainer"
 import Deposit from "./components/depositComponent/Deposit"
 import Boost from "./components/boostComponent/Boost"
+import CreateGoal from "./components/createGoalComponent/CreateGoal"
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
 
 
       </div>
+
+      <CreateGoal></CreateGoal>
 
       <footer></footer>
 

@@ -6,6 +6,7 @@ import java.util.Date;
 
 @Entity
 public class Goals {
+    private int monthlyDepo;
     private String goalName;
     private String reason;
     private Date targetDate;
@@ -22,8 +23,8 @@ public class Goals {
     public Goals() {
     }
 
-    //Add to constructure
-    public Goals(String goalName,String reason, Date targetDate, int target$Amount, int currentGoal, User user, int initDeposit, int priority, Long goalId) {
+
+    public Goals(String goalName,String reason, Date targetDate, int target$Amount,int monthlyDepo, int currentGoal, User user, int initDeposit, int priority, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;
@@ -33,6 +34,7 @@ public class Goals {
         this.priority = priority;
         this.user = user;
         this.goalId = goalId;
+        this.monthlyDepo = monthlyDepo;
     }
 
     public String getReason() {
@@ -105,5 +107,13 @@ public class Goals {
 
     public void setGoalId(Long goalId) {
         this.goalId = goalId;
+    }
+
+    public int getMonthlyDepo() {
+        return monthlyDepo;
+    }
+
+    public void setMonthlyDepo(int monthlyDepo) {
+        this.monthlyDepo = monthlyDepo;
     }
 }

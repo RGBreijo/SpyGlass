@@ -1,10 +1,25 @@
 import "./GoalCard.css"
+import "../createGoalComponent/CreateGoal"
+import CreateGoal from "../createGoalComponent/CreateGoal";
+import React, {useState, useEffect} from 'react';
 
-const GoalCard = () => 
+const GoalCard = (props) => 
 {
+
+    const clicked = () =>
+    {
+        props.onEdit();
+    }
+
+
     return (
         <div className="goalCard">
-                <h2>House</h2>
+            {}
+                <div className="goalCardHeader">
+                    <h2>House</h2>
+                    <p onClick={clicked}>Edit</p>
+                </div>
+   
                 <div className="goalCardInnerSection">
                     <div className="goalDescription">
                         <p>I've always lived in a small cramped apartment. 

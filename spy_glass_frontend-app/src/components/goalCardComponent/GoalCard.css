@@ -85,6 +85,29 @@ img
     height: 100px;
 }
 
+.goalCardHeader
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.goalCardHeader h2, .goalCardHeader p
+{
+    padding: 0;
+    margin: 0;
+}
+
+.goalCardHeader p
+{
+    color: lightgray;
+    cursor: pointer;
+}
+
+
+.goalCardHeader div
+{
+    background-color: pink;
+}
 
 
 

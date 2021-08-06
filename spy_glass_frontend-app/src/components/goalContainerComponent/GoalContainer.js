@@ -1,7 +1,7 @@
 import GoalCard from "../goalCardComponent/GoalCard"
 import GoalDetailInfoContainer from "../goalDetailInfoContainer/GoalDetailInfoContainer"
 import "./GoalContainer.css"
-const GoalContainer = () =>
+const GoalContainer = (props) =>
 {
     return(
         <div className="goalContainer">
@@ -19,11 +19,11 @@ const GoalContainer = () =>
                 </div>
 
                 <div className="goalContainerTop"> 
-                <GoalCard></GoalCard>
-                <GoalCard></GoalCard>
-                <GoalCard></GoalCard>
-                <GoalCard></GoalCard>
-                <GoalCard></GoalCard>
+                <GoalCard onEdit={props.onEdit} ></GoalCard>
+                <GoalCard onEdit={props.onEdit}></GoalCard>
+                <GoalCard onEdit={props.onEdit}></GoalCard>
+                <GoalCard onEdit={props.onEdit}></GoalCard>
+                <GoalCard onEdit={props.onEdit}></GoalCard>
                 </div>
             </div>
 

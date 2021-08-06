@@ -6,6 +6,7 @@
   background-color: white;
   width: 30em;
   margin-bottom: 1em;
+  position: absolute;
 }
 
 .createGoalContainer

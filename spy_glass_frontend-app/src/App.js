@@ -4,8 +4,22 @@ import GoalContainer from "./components/goalContainerComponent/GoalContainer"
 import Deposit from "./components/depositComponent/Deposit"
 import Boost from "./components/boostComponent/Boost"
 import CreateGoal from "./components/createGoalComponent/CreateGoal"
+import React, {useState, useEffect} from 'react';
 
 function App() {
+
+  const [displayComponent, setDisplayComponent] = useState(false);
+
+
+  const editBtnClicked = () =>
+  {
+      setDisplayComponent(true);
+  }
+
+
+
+
+
   return (
     <div>
       <div className="welcomeContainer">
@@ -18,13 +32,12 @@ function App() {
         </div>
 
         <div className="mainGoalInfoContainer">
-          <GoalContainer></GoalContainer>
+          <GoalContainer onEdit={editBtnClicked}></GoalContainer>
         </div>
 
 
       </div>
-
-      <CreateGoal></CreateGoal>
+      {displayComponent && <CreateGoal></CreateGoal>}
 
       <footer></footer>
 

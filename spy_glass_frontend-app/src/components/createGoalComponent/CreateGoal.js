@@ -1,7 +1,8 @@
 import "./CreateGoal.css"
 
-const CreateGoal = () =>
+const CreateGoal = (props) =>
 {
+
     return(
         <div className="createGoalContainer"> 
             <div className="createGoalHeaderContainer"> 
@@ -54,7 +55,7 @@ const CreateGoal = () =>
 
                     <div className="CreateGoalButtonContainer">
 
-                         <input type="button" value="cancel" id="createCancelBtn"></input>
+                         <input onClick = {props.onCancel} type="button" value="cancel" id="createCancelBtn"></input>
                         <input type="submit" value="save" id="createSaveBtn"></input>
                     </div>
 

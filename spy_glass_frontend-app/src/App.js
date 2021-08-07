@@ -10,12 +10,19 @@ import MainCreateComponentScreen from "./components/mainCreateComponentScreen/Ma
 function App() {
 
   const [displayComponent, setDisplayComponent] = useState(false);
-
+  const [cancelClicked, setCancelClicked]       = useState(false);
 
   const editBtnClicked = () =>
   {
       setDisplayComponent(true);
+      setCancelClicked(false);
   }
+
+  const cancelBtnClicked = () =>
+  {
+    setCancelClicked(true);
+  }
+
 
 
 
@@ -23,7 +30,7 @@ function App() {
 
   return (
     <div className="outerContainer">
-            {displayComponent && <MainCreateComponentScreen></MainCreateComponentScreen>}
+            {!cancelClicked && displayComponent && <MainCreateComponentScreen onCancel={cancelBtnClicked}></MainCreateComponentScreen>}
 
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>

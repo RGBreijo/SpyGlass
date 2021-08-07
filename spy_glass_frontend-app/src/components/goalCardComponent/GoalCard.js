@@ -52,7 +52,7 @@ const GoalCard = (props) =>
                     </div>
 
                 <div className="priceContainer">
-                    <CountUp isCounting thousandsSeparator="," start={0} end={20000} duration={2}></CountUp>
+                    <CountUp prefix="$" isCounting thousandsSeparator="," start={0} end={20000} duration={2}></CountUp>
                     <p>$200,000</p>
                 </div>
 

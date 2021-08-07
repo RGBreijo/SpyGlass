@@ -48,11 +48,11 @@ const GoalCard = (props) =>
                 </div>
 
                 <div>
-                    <ProgressBar completed={completedAmount} transitionDuration="2s" bgColor="#04D582" borderRadius="5px" baseBgColor="#E3F3FD" isLabelVisible={false} height="15px"/>
+                    <ProgressBar completed={completedAmount} transitionDuration="1.5s" bgColor="#04D582" borderRadius="5px" baseBgColor="#E3F3FD" isLabelVisible={false} height="15px"/>
                     </div>
 
                 <div className="priceContainer">
-                    <CountUp prefix="$" isCounting thousandsSeparator="," start={0} end={20000} duration={2}></CountUp>
+                    <CountUp prefix="$" isCounting thousandsSeparator="," start={0} end={20000} duration={1.5}></CountUp>
                     <p>$200,000</p>
                 </div>
 

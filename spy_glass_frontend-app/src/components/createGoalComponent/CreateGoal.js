@@ -1,13 +1,18 @@
 import "./CreateGoal.css"
-
+import vanguard from "../images/vanguard.jpg"
 const CreateGoal = (props) =>
 {
 
     return(
         <div className="createGoalContainer"> 
+
             <div className="createGoalHeaderContainer"> 
-                <h2>Your Goal</h2>
+                <h2 id="createGoalTitle">Your Goal</h2>
             </div>
+            
+
+            <div className="createGoalMainSectionContainer">
+            <div>
                 <form className="createGoalFormContainer">
 
                     <div className="createGoalInputContainer">
@@ -57,12 +62,13 @@ const CreateGoal = (props) =>
 
                          <input onClick = {props.onCancel} type="button" value="cancel" id="createCancelBtn"></input>
                         <input type="submit" value="save" id="createSaveBtn"></input>
-                    </div>
-
-
-                       
+                    </div>  
                 </form>
-            <div>
+            </div>
+
+            <div className="createImageContainer">
+                <img alt="vanguard logo" src={vanguard} id="createGoalImage"></img>
+            </div>
 
             </div>
         </div>

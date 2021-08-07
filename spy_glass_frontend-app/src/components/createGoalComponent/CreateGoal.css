@@ -4,9 +4,8 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background-color: white;
+  opacity: 100%;
   width: 30em;
-  margin-bottom: 1em;
-  position: absolute;
 }
 
 .createGoalContainer

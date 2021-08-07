@@ -3,8 +3,9 @@ import './App.css';
 import GoalContainer from "./components/goalContainerComponent/GoalContainer"
 import Deposit from "./components/depositComponent/Deposit"
 import Boost from "./components/boostComponent/Boost"
-import CreateGoal from "./components/createGoalComponent/CreateGoal"
 import React, {useState, useEffect} from 'react';
+
+import MainCreateComponentScreen from "./components/mainCreateComponentScreen/MainCreateComponentScreen"
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
 
 
   return (
-    <div>
+    <div className="outerContainer">
+            {displayComponent && <MainCreateComponentScreen></MainCreateComponentScreen>}
+
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>
       </div>
@@ -37,8 +40,6 @@ function App() {
 
 
       </div>
-      {displayComponent && <CreateGoal></CreateGoal>}
-
       <footer></footer>
 
 

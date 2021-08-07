@@ -1,3 +1,6 @@
+
+
+
 body
 {
   background-color: #FAFAFA;
@@ -40,7 +43,14 @@ footer
   width: 30%;
   text-align: center;
   color: #434041;
+
 }
+.outerContainer
+{
+  /* margin-top: 0; leaving space */
+  margin-top: -2em;
+}
+
 
 
 

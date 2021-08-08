@@ -168,7 +168,9 @@
 #descriptionContainer textarea
 {
     margin-top: 1em;
-    border: 1px solid #A8A9A8;
+    padding: 0.5em;
+    border: 1px solid #E0E0E1;
+
 
 }
 

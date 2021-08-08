@@ -20,7 +20,10 @@ const GoalCard = (props) =>
     const clicked = () =>
     {
         props.onEdit();
-
+        /**
+         * On edit use to open up the create goal container but switched it so now it is opened up by clicking 
+         * create new goal. This onEdit actually needs to call another function that opens up a ui specific for editting. 
+         */
         //setCompletedAmount(50);  this is a test to show bar of that goal going to 50. After caluclating the required value this should be called 
     }
 
@@ -30,7 +33,7 @@ const GoalCard = (props) =>
             
                 <div className="goalCardHeader">
                     <h2>House</h2>
-                    <p onClick={clicked}>Edit</p>
+                    <p>Edit</p>
                 </div>
    
                 <div className="goalCardInnerSection">

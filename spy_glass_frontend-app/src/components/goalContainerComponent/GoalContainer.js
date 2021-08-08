@@ -3,6 +3,12 @@ import GoalDetailInfoContainer from "../goalDetailInfoContainer/GoalDetailInfoCo
 import "./GoalContainer.css"
 const GoalContainer = (props) =>
 {
+    const clicked = () =>
+    {
+        props.onEdit();
+    }
+
+
     return(
         <div className="goalContainer">
 
@@ -10,7 +16,7 @@ const GoalContainer = (props) =>
                 <div>
                     <div className="mainGoalContainerHeader">
                         <h2 id="yourGoal">Your Financial Goals</h2>
-                        <input type="button" value="+ New Goal" />
+                        <input onClick={clicked} type="button" value="+ New Goal" />
 
                     </div>
 

@@ -75,3 +75,8 @@ th:not([scope=row]) {
     z-index: 2;
   }
 
+
+  .sortPointer
+  {
+    cursor: pointer;
+  }

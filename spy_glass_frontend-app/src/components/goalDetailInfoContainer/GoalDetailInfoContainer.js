@@ -12,13 +12,13 @@ const GoalDetailINfoContainer = () =>
 
                      
                     <tr className="goalDetailTableHeader">
-                        <th>Name &#x25B2;</th>
-                        <th>Target Date &#x25B2;</th>
-                        <th>Amount Saved &#x25B2;</th>
-                        <th>Target Dollar Amount &#x25B2;</th>
-                        <th> Amount Remaning &#x25B2;</th>
-                        <th>Monthly Deposit &#x25B2;</th>  
-                        <th>On Track &#x25B2;</th>
+                        <th>Name <span className="sortPointer">&#x25B2;</span></th>
+                        <th>Target Date <span className="sortPointer">&#x25B2;</span></th>
+                        <th>Amount Saved <span className="sortPointer">&#x25B2;</span></th>
+                        <th>Target Dollar Amount <span className="sortPointer">&#x25B2;</span></th>
+                        <th> Amount Remaning <span className="sortPointer">&#x25B2;</span></th>
+                        <th>Monthly Deposit <span className="sortPointer">&#x25B2;</span></th>  
+                        <th>On Track <span className="sortPointer">&#x25B2;</span></th>
                     </tr>
 
                     <tr>

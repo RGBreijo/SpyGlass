@@ -8,8 +8,10 @@ const GoalContainer = (props) =>
 
             <div class="mainGoalContent">
                 <div>
-                    <div>
+                    <div className="mainGoalContainerHeader">
                         <h2 id="yourGoal">Your Financial Goals</h2>
+                        <input type="button" value="+ New Goal" />
+
                     </div>
 
                     <div id="totalSavedContainer">

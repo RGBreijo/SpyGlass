@@ -13,13 +13,12 @@ public class Goal
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long goalId;
-
     private String goalName;
     private String reason;
     private Date targetDate;
-
     private double targetAmount;
     private double initialDeposit;
+    private double monthlyDeposit;
 
     @JsonIgnore
     @ManyToOne()
@@ -29,12 +28,13 @@ public class Goal
     {
     }
 
-    public Goal(String goalName, String reason, Date targetDate, double target$Amount, User user, double initialDeposit, Long goalId) {
+    public Goal(String goalName, String reason, Date targetDate, double targetAmount, User user, double initialDeposit, double monthlyDeposit, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;
-        this.targetAmount = target$Amount;
+        this.targetAmount = targetAmount;
         this.initialDeposit = initialDeposit;
+        this.monthlyDeposit = monthlyDeposit;
         this.user = user;
         this.goalId = goalId;
     }
@@ -78,6 +78,14 @@ public class Goal
 
     public void setInitialDeposit(double initDeposit) {
         this.initialDeposit = initDeposit;
+    }
+
+    public double getMonthlyDeposit() {
+        return monthlyDeposit;
+    }
+
+    public void setMonthlyDeposit(double monthlyDeposit) {
+        this.monthlyDeposit = monthlyDeposit;
     }
 
     public User getUser() {

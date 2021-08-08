@@ -93,6 +93,7 @@ public class GoalService {
              oldGoal.setReason(updatedGoal.getReason());
              oldGoal.setTargetAmount(updatedGoal.getTargetAmount());
              oldGoal.setTargetDate(updatedGoal.getTargetDate());
+             oldGoal.setMonthlyDeposit(updatedGoal.getMonthlyDeposit());
              goalsRepo.save(oldGoal);
              return true;
         }}

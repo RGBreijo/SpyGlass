@@ -22,6 +22,7 @@
 #createGoalTitle
 {
     font-size: 2em;
+    margin-bottom: 0;
 }
 
 .createGoalFormContainer, .createGoalHeaderContainer
@@ -84,8 +85,10 @@
 
 #imgUploadContainer
 {
-    display: flex;
-    justify-content: flex-end;
+    display: flex; 
+
+    align-self: flex-end;
+    width: 220px;
 }
 
 
@@ -95,14 +98,12 @@
 {
     display: flex;
     flex-direction: column;
-
     border: none;
 }
 
 #imgUploadContainer input
 {
     display: flex;
-
     flex-direction: column;
 }
 
@@ -136,6 +137,7 @@
     font-size: 1.3em;
     cursor: pointer;
     width: 120px;
+    border-radius: 5px;
 }
 
 
@@ -144,7 +146,7 @@
 {
 
     color: white;
-    border: 1px solid #A8A9A8;
+
     padding: 0;
     font-size: 1.3em;
     cursor: pointer;
@@ -152,6 +154,9 @@
 
     background-color: #4ECE7A;
     border: none;
+
+    border-radius: 5px;
+
 }
 
 
@@ -186,4 +191,52 @@
     align-items: center;
     height: 300px;
     justify-content: center;
+}
+#createDivider
+{
+   opacity: 20%;
+}
+
+
+.moneyInputContainer{
+	display:inline-block;
+	position: relative;
+	}
+.moneyInputContainer input
+{
+    padding-left:15px;
+    padding-bottom: 3px;
+}
+.moneyInputContainer:before{
+	position: absolute;
+    content:"$";
+    left:5px;
+	top: 33px;
+     }
+     
+
+
+
+
+
+
+.inputFile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+}
+
+#goalImgLabel
+{
+
+    max-width: 110px;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 1.3em;
+    background-color: #F3F2F5;
+    color: #334365;
+
 }

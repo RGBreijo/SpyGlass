@@ -9,7 +9,7 @@ const CreateGoal = (props) =>
             <div className="createGoalHeaderContainer"> 
                 <h2 id="createGoalTitle">Your Goal</h2>
             </div>
-            
+            <hr id="createDivider"></hr>
 
             <div className="createGoalMainSectionContainer">
             <div>
@@ -21,17 +21,17 @@ const CreateGoal = (props) =>
                             <input type="text"></input>
                         </div>
 
-                        <div>
+                        <div className="moneyInputContainer">
                             <label>Target Dollar Amount</label>
-                            <input type="text"></input>
+                            <input type="text" placeholder="5000.00"></input>
                         </div>
                     </div>
 
 
                     <div className="createGoalInputContainer">
-                        <div>
+                        <div className="moneyInputContainer">
                             <label>Initial Deposit</label>
-                            <input type="text"></input>
+                            <input type="text" placeholder="2000.00"></input>
                         </div>
 
                         <div>
@@ -43,18 +43,19 @@ const CreateGoal = (props) =>
                     <div className="createGoalInputContainer">
                         <div className="moneyInputContainer">
                             <label>Monthly Deposit</label>
-                            <input type="text"></input>
+                            <input type="text" placeholder="300.00"></input>
                         </div>
 
+          
                         <div id="imgUploadContainer">
-                            <label for="img">Goal Image</label>
-                            <input type="file" id="img" name="img" accept="image/*"></input>
+                            <label for="img" id="goalImgLabel">Upload Image</label>
+                            <input className="inputFile" type="file" id="img" name="img" accept="image/*"></input>
                         </div>
                     </div>
 
                     <div id="descriptionContainer">
                         <label>Description</label>
-                        <textarea></textarea>
+                        <textarea placeholder="Why do you want to achieve this goal?"></textarea>
                     </div>
 
 

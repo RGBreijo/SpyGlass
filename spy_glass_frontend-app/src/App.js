@@ -6,31 +6,42 @@ import Boost from "./components/boostComponent/Boost"
 import React, {useState, useEffect} from 'react';
 
 import MainCreateComponentScreen from "./components/mainCreateComponentScreen/MainCreateComponentScreen"
+import MainEditComponentScreen from "./components/mainEditComponentScreen/MainEditComponentScreen"
+
 
 function App() {
 
-  const [displayComponent, setDisplayComponent] = useState(false);
+  const [displayCreateNewGoal, setDisplayCreateNewGoal] = useState(false);
+  const [displayEditGoal, setDisplayEditGoal] = useState(false);
+
   const [cancelClicked, setCancelClicked]       = useState(false);
 
-  const editBtnClicked = () =>
+
+
+  const createNewCardBtnClicked = () =>
   {
-      setDisplayComponent(true);
+      setDisplayCreateNewGoal(true);
       setCancelClicked(false);
+  }
+
+  const editGoalBtnClicked = () => 
+  {
+    setDisplayEditGoal(true);
+    setCancelClicked(false);
   }
 
   const cancelBtnClicked = () =>
   {
     setCancelClicked(true);
+    setDisplayEditGoal(false);
+    setDisplayCreateNewGoal(false);
   }
-
-
-
-
 
 
   return (
     <div className="outerContainer">
-            {!cancelClicked && displayComponent && <MainCreateComponentScreen onCancel={cancelBtnClicked}></MainCreateComponentScreen>}
+            {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked}></MainCreateComponentScreen>}
+            {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked}></MainEditComponentScreen>}
 
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>
@@ -42,7 +53,7 @@ function App() {
         </div>
 
         <div className="mainGoalInfoContainer">
-          <GoalContainer onEdit={editBtnClicked}></GoalContainer>
+          <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}></GoalContainer>
         </div>
 
 

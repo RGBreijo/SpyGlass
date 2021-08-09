@@ -5,17 +5,24 @@
   border-radius: 5px;
   background-color: white;
   opacity: 100%;
-  width: 30em;
+  width: 48em;
+  color: #334365;
+  position: relative;
+  padding: 1em;
+
 }
 
-.createGoalContainer
-{
-    color: #334365;
-}
+
 
 .boostContainer h2
 {
     color: #334365;
+}
+
+#createGoalTitle
+{
+    font-size: 2em;
+    margin-bottom: 0;
 }
 
 .createGoalFormContainer, .createGoalHeaderContainer
@@ -30,8 +37,7 @@
     padding-top: 0.1em;
     padding-left: 1em;
     padding-bottom: 0.1em;
-    border-bottom: 1px solid #E8E7E7;
-    /* background-color: green; */
+
 
 
 }
@@ -39,11 +45,15 @@
 .createGoalFormContainer label
 {
     margin-bottom: 0.5em;
+    color: #334365;
+    font-weight: bold;
 }
 
 .createGoalContainer input
 {
-    width: 100%;
+    width: 190px;
+    margin-right: 2em;
+    height: 30px;
     box-sizing: border-box;
 
     border-style: solid;
@@ -75,28 +85,28 @@
 
 #imgUploadContainer
 {
-    display: flex;
-    justify-content: flex-start;
+    display: flex; 
 
+    align-self: flex-end;
+    width: 220px;
 }
+
+
+
+
 #imgUploadContainer input
 {
     display: flex;
     flex-direction: column;
-    width: 200px;
     border: none;
 }
 
 #imgUploadContainer input
 {
     display: flex;
-
     flex-direction: column;
 }
-input[type="file"]
-{
-    /* background-color: blue; */
-}
+
 
 .createGoalDivider
 {
@@ -109,14 +119,12 @@ input[type="file"]
     display: flex;
     justify-content: flex-end;
     margin-top: 1em;
+    width: 180%;
+
+
 }
 
-.CreateGoalButtonContainer input
-{
-    width: 100px;
-    margin-left: 1em;
-    border-radius: 5px;
-}
+
 
 
 #createCancelBtn
@@ -125,19 +133,30 @@ input[type="file"]
     color: #A8A9A8;
     background-color: #FFFFFF;
     border: 1px solid #A8A9A8;
-    font-size: 1em;
+    padding: 0;
+    font-size: 1.3em;
     cursor: pointer;
+    width: 120px;
+    border-radius: 5px;
 }
 
 
 
 #createSaveBtn
 {
-    background-color: #4ECE7A;
-    font-size: 1em;
+
     color: white;
-    border: none;
+
+    padding: 0;
+    font-size: 1.3em;
     cursor: pointer;
+    width: 120px;
+
+    background-color: #4ECE7A;
+    border: none;
+
+    border-radius: 5px;
+
 }
 
 
@@ -149,6 +168,77 @@ input[type="file"]
 #descriptionContainer textarea
 {
     margin-top: 1em;
-    border: 1px solid #A8A9A8;
+    padding: 0.5em;
+    border: 1px solid #E0E0E1;
+
+
+}
+
+.createGoalMainSectionContainer
+{
+    display: flex;
+}
+
+#createGoalImage
+{
+    height: 150px;
+    width: 280px;
+  
+}
+
+.createImageContainer
+{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+}
+#createDivider
+{
+   opacity: 20%;
+}
+
+
+.moneyInputContainer{
+	display:inline-block;
+	position: relative;
+	}
+.moneyInputContainer input
+{
+    padding-left:15px;
+    padding-bottom: 3px;
+}
+.moneyInputContainer:before{
+	position: absolute;
+    content:"$";
+    left:5px;
+	top: 33px;
+     }
+     
+
+
+
+
+
+
+.inputFile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+}
+
+#goalImgLabel
+{
+
+    max-width: 110px;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 1.3em;
+    background-color: #F3F2F5;
+    color: #334365;
 
 }

@@ -51,7 +51,6 @@ table
 
 .goalDetailTableHeader th
 {
-    /* position:absolute; */
     background-color: #F2F1F1;
 }
 
@@ -75,3 +74,8 @@ th:not([scope=row]) {
     z-index: 2;
   }
 
+
+  .sortPointer
+  {
+    cursor: pointer;
+  }

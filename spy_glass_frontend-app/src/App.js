@@ -11,11 +11,22 @@ import MainEditComponentScreen from "./components/mainEditComponentScreen/MainEd
 
 function App() {
 
+
+  let goalCard = 
+  {
+    goalName: "", 
+    goalDescription: "", 
+    monthlyDeposit: 0.00, 
+    targetDollarAmount: 0.00
+
+  }
+
   const [displayCreateNewGoal, setDisplayCreateNewGoal] = useState(false);
-  const [displayEditGoal, setDisplayEditGoal] = useState(false);
+  const [displayEditGoal, setDisplayEditGoal]           = useState(false);
+  const [cancelClicked, setCancelClicked]               = useState(false);
 
-  const [cancelClicked, setCancelClicked]       = useState(false);
 
+  let [goalCardInfo, setGoalCardInfo] = useState(goalCard);
 
 
   const createNewCardBtnClicked = () =>
@@ -24,11 +35,16 @@ function App() {
       setCancelClicked(false);
   }
 
-  const editGoalBtnClicked = () => 
+  const editGoalBtnClicked = (name) => 
   {
     setDisplayEditGoal(true);
     setCancelClicked(false);
+    goalCard.goalName = name;
+    setGoalCardInfo(goalCard);
   }
+
+
+
 
   const cancelBtnClicked = () =>
   {
@@ -41,7 +57,7 @@ function App() {
   return (
     <div className="outerContainer">
             {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked}></MainCreateComponentScreen>}
-            {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked}></MainEditComponentScreen>}
+            {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo}></MainEditComponentScreen>}
 
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>

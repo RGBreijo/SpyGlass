@@ -3,6 +3,11 @@ import vanguard from "../images/vanguard.jpg"
 const CreateGoal = (props) =>
 {
 
+    console.log("here: " + props.goalName);
+
+
+
+
     return(
         <div className="createGoalContainer"> 
 
@@ -18,7 +23,7 @@ const CreateGoal = (props) =>
                     <div className="createGoalInputContainer">
                         <div>
                             <label>Goal Name</label>
-                            <input type="text"></input>
+                            <input type="text" value={props.cardInfo.goalName}></input>
                         </div>
 
                         <div className="moneyInputContainer">

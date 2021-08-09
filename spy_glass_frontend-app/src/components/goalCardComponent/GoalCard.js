@@ -19,7 +19,9 @@ const GoalCard = (props) =>
 
     const clicked = () =>
     {
-        props.onEdit();
+        // the state name, date etc... will be passed here 
+        props.onEdit("Name of goal");
+
         //setCompletedAmount(50);  this is a test to show bar of that goal going to 50. After caluclating the required value this should be called 
     }
 

@@ -1,4 +1,3 @@
-
 package com.example.spyglass.Controllers;
 
 import com.example.spyglass.Exceptions.GoalAlreadyExistsExeption;
@@ -20,7 +19,6 @@ public class GoalsController {
     public GoalsController(GoalService goalService){
         this.goalService = goalService;
     }
-
 
     @PostMapping
     @CrossOrigin
@@ -53,7 +51,5 @@ public class GoalsController {
         return goalService.updateGoal(goalId,updatedGoal);
 
    }
-
-
 }
 

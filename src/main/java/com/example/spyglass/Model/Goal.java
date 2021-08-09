@@ -16,9 +16,9 @@ public class Goal
     private String goalName;
     private String reason;
     private Date targetDate;
-
     private double targetAmount;
     private double initialDeposit;
+    private double monthlyDepo;
 
     @JsonIgnore
     @ManyToOne()
@@ -28,13 +28,13 @@ public class Goal
     {
     }
 
-    public Goal(String goalName, String reason, Date targetDate, double target$Amount, User user, double initialDeposit, Long goalId) {
+    public Goal(String goalName, String reason, Date targetDate, double targetAmount, double initialDeposit, double monthlyDepo, Long goalId) {
         this.reason = reason;
         this.goalName = goalName;
         this.targetDate = targetDate;
-        this.targetAmount = target$Amount;
+        this.targetAmount = targetAmount;
         this.initialDeposit = initialDeposit;
-        this.user = user;
+        this.monthlyDepo = monthlyDepo;
         this.goalId = goalId;
     }
 
@@ -94,4 +94,13 @@ public class Goal
     public void setGoalId(Long goalId) {
         this.goalId = goalId;
     }
+
+    public double getMonthlyDepo() {
+        return monthlyDepo;
+    }
+
+    public void setMonthlyDepo(double monthlyDepo) {
+        this.monthlyDepo = monthlyDepo;
+    }
+
 }

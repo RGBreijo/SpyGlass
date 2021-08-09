@@ -14,7 +14,6 @@ import java.util.List;
 @Service
 public class GoalService {
 
-
     private final GoalRepository goalsRepo;
     private final UserService userService;
 
@@ -46,12 +45,6 @@ public class GoalService {
             }
 
     }
-
-
-
-
-
-
 
     public List<Goal> getAllGoals(){
         return goalsRepo.findAll();
@@ -95,6 +88,7 @@ public class GoalService {
              oldGoal.setReason(updatedGoal.getReason());
              oldGoal.setTargetAmount(updatedGoal.getTargetAmount());
              oldGoal.setTargetDate(updatedGoal.getTargetDate());
+
              goalsRepo.save(oldGoal);
              return true;
         }}

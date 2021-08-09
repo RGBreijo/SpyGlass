@@ -27,21 +27,23 @@ public class GoalService {
 
     public void creatGoal(String username, Goal newGoal) throws GoalAlreadyExistsExeption
     {
-        if (newGoal.getGoalId() != null){
-        if (goalsRepo.existsById(newGoal.getGoalId()))
+        if (newGoal.getGoalId() != null)
         {
-                throw new GoalAlreadyExistsExeption(newGoal.getGoalId());
-        }}
-
-        User user = userService.getUser(username);
-        if(user != null)
-        {
-           user.getGoals().add(newGoal);
-           newGoal.setUser(user);
-
-           userService.save(user);
-           goalsRepo.save(newGoal);
+            if (goalsRepo.existsById(newGoal.getGoalId()))
+            {
+                    throw new GoalAlreadyExistsExeption(newGoal.getGoalId());
+            }
         }
+
+            User user = userService.getUser(username);
+            if(user != null)
+            {
+               user.getGoals().add(newGoal);
+               newGoal.setUser(user);
+
+               userService.save(user);
+               goalsRepo.save(newGoal);
+            }
 
     }
 

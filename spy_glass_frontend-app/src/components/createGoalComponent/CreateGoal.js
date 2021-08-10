@@ -47,10 +47,10 @@ class CreateGoal extends Component {
         targetAmount: this.state.targetAmount, initialDeposit: this.state.initialDeposit, monthlyDepo: this.state.monthlyDepo};
         console.log("goal => " + JSON.stringify(goal));
 
-        GoalService.creatGoal(goal).then(res => {
+        GoalService.createGoal(goal).then(res => {
             this.setState({goals: res.data})
             this.props.onCancel();
-        })
+        });
     }
     render() {
             return (

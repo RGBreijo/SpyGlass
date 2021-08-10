@@ -20,6 +20,7 @@ class GoalDetailInfoContainer extends React.Component {
 
     // Note: Each th was given the same class instead of putting
     render() {
+
         return (
             <div>
                 <div className="tableContainer">
@@ -46,7 +47,7 @@ class GoalDetailInfoContainer extends React.Component {
                                         <td>${goal.initialDeposit}</td>
                                         <td>${goal.targetAmount}</td>
                                         <td>${goal.targetAmount - goal.initialDeposit}</td>
-                                        <td>${goal.monthlyDeposit}</td>
+                                        <td>${goal.monthlyDepo}</td>
                                         <td className="itemAtEnd onTrack"> True</td>
                                     </tr>
                             )

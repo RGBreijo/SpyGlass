@@ -28,10 +28,6 @@ const GoalContainer = (props) =>
 
                 <div className="goalContainerTop"> 
                 <GoalCard onEdit={props.onEdit}></GoalCard>
-                <GoalCard onEdit={props.onEdit}></GoalCard>
-                <GoalCard onEdit={props.onEdit}></GoalCard>
-                <GoalCard onEdit={props.onEdit}></GoalCard>
-                <GoalCard onEdit={props.onEdit}></GoalCard>
                 </div>
             </div>
 

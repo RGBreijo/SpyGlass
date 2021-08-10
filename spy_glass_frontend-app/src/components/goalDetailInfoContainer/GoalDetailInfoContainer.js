@@ -2,6 +2,7 @@ import React from 'react';
 import "./GoalDetailInfoContainer.css";
 import GoalService from "../../GoalServices/GoalService";
 import Moment from 'moment';
+import localdate from 'localdate'
 
 class GoalDetailInfoContainer extends React.Component 
 {
@@ -26,6 +27,28 @@ class GoalDetailInfoContainer extends React.Component
         GoalService.getGoals().then((response) => {
             this.setState({goals: response.data})
         })
+    }
+
+    isOnTrack(initial, goal, target,Monthly){
+        var targetDate = new localdate(target)
+        var today = new localdate(2021,8,10)
+
+        var days = today.diff(targetDate) * -1;
+        var months = 0;
+
+        if (days % 30 != 0) {
+            months = months + Math.floor(days / 30)
+        }
+
+        var monthsNeeded = Math.floor((goal - initial) / Monthly)
+
+
+        if (monthsNeeded > months || days < 0) {
+            return "False"
+        }
+        return "True"
+
+        
     }
 
     render() {
@@ -56,7 +79,7 @@ class GoalDetailInfoContainer extends React.Component
                                         <td>${goal.targetAmount}</td>
                                         <td>${goal.targetAmount - goal.initialDeposit}</td>
                                         <td>${goal.monthlyDepo}</td>
-                                        <td className="itemAtEnd onTrack"> True</td>
+                                        <td className="itemAtEnd onTrack"> {this.isOnTrack(goal.initialDeposit,goal.targetAmount,goal.targetDate,goal.monthlyDepo)}</td>
                                     </tr>
                             )
                         }

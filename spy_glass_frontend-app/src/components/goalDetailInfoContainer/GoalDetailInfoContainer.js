@@ -47,9 +47,19 @@ class GoalDetailInfoContainer extends React.Component
             return "False"
         }
         return "True"
-
-        
     }
+
+    onTrackClassName(onTrack)
+    {
+        if(onTrack === "True")
+        {
+            return "itemAtEnd onTrack";
+        }else
+        {
+            return "itemAtEnd notOnTrack";
+        }
+    }
+
 
     render() {
         return (
@@ -79,7 +89,7 @@ class GoalDetailInfoContainer extends React.Component
                                         <td>${goal.targetAmount}</td>
                                         <td>${goal.targetAmount - goal.initialDeposit}</td>
                                         <td>${goal.monthlyDepo}</td>
-                                        <td className="itemAtEnd onTrack"> {this.isOnTrack(goal.initialDeposit,goal.targetAmount,goal.targetDate,goal.monthlyDepo)}</td>
+                                        <td className={this.onTrackClassName(this.isOnTrack(goal.initialDeposit,goal.targetAmount,goal.targetDate,goal.monthlyDepo))}> {this.isOnTrack(goal.initialDeposit,goal.targetAmount,goal.targetDate,goal.monthlyDepo)}</td>
                                     </tr>
                             )
                         }

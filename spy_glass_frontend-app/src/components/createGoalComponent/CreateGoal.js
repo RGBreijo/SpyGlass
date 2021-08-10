@@ -52,7 +52,7 @@ class CreateGoal extends Component {
         });
         
         setTimeout(() => {
-             this.props.onCancel();
+             this.props.onSave();
           }, 200); 
     }
 

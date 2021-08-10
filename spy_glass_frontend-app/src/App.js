@@ -45,21 +45,23 @@ function App() {
   }
 
 
-
+  const saveBtnClicked = () =>
+  {
+    cancelBtnClicked();
+    setReloadGoal(!reloadGoal);
+  }
 
   const cancelBtnClicked = () =>
   {
     setCancelClicked(true);
     setDisplayEditGoal(false);
     setDisplayCreateNewGoal(false);
-    setReloadGoal(!reloadGoal);
-
   }
 
 
   return (
     <div className="outerContainer">
-            {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked}></MainCreateComponentScreen>}
+            {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} onSave={saveBtnClicked}></MainCreateComponentScreen>}
             {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo}></MainEditComponentScreen>}
 
       <div className="welcomeContainer">

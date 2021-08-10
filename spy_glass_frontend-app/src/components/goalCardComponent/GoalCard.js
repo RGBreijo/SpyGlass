@@ -27,6 +27,11 @@ class GoalCard extends Component {
         })
     }
 
+     clicked = () =>
+    {
+        this.props.onEdit();
+    }
+
     render() {
 
         return (
@@ -35,7 +40,7 @@ class GoalCard extends Component {
                         <div className="goalCard" key={goal.goalId}>
                             <div className="goalCardHeader">
                                 <h2>{goal.goalName}</h2>
-                                <p>Edit</p>
+                                <p onClick={this.clicked}>Edit</p>
                             </div>
 
                             <div className="goalCardInnerSection">

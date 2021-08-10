@@ -72,14 +72,14 @@ class CreateGoal extends Component {
                                 <div className="createGoalInputContainer">
                                     <div>
                                         <label>Goal Name</label>
-                                        <input placeholder= "Goal Name" name= "goalName" className="form-control"
+                                        <input name= "goalName" className="form-control"
                                                value={this.state.goalName} onChange={this.setGoalName}/>
 
                                     </div>
 
                                      <div className="moneyInputContainer">
                                         <label>Target Dollar Amount</label>
-                                        <input placeholder= "0000.00" name= "targetAmount" className="form-control"
+                                        <input placeholder= "1000.00" name= "targetAmount" className="form-control"
                                                value={this.state.targetAmount} onChange={this.setTargetAmount}/>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@ class CreateGoal extends Component {
                                 <div className="createGoalInputContainer">
                                     <div className="moneyInputContainer">
                                         <label>Initial Deposit</label>
-                                        <input placeholder= "0000.00" name= "initialDeposit" className="form-control"
+                                        <input placeholder= "200.00" name= "initialDeposit" className="form-control"
                                                value={this.state.initialDeposit} onChange={this.setInitialDepo}/>
                                     </div>
 
@@ -102,7 +102,7 @@ class CreateGoal extends Component {
                                 <div className="createGoalInputContainer">
                                     <div className="moneyInputContainer">
                                         <label>Monthly Deposit</label>
-                                        <input placeholder= "0000.00" name= "monthlyDepo" className="form-control"
+                                        <input placeholder= "100.00" name= "monthlyDepo" className="form-control"
                                                value={this.state.monthlyDepo} onChange={this.setMonthlyDepo}/>
                                     </div>
 

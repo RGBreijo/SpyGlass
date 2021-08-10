@@ -58,15 +58,23 @@
     background-color: #03D482;;
 }
 
+#targetAmount
+{
+
+    height: 100%;
+    margin-top: 0;
+}
+
 
 
 .priceContainer
 {
     color: #B0BAD2;
     display: flex;
+    padding: 0;
     justify-content: space-between;
-    height: 40px;
-    margin-bottom: -0.5em;
+    height: 40px; 
+    align-items: flex-start;
 
 }
 

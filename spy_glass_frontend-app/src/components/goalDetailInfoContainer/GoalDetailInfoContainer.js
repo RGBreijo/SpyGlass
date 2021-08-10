@@ -42,7 +42,7 @@ class GoalDetailInfoContainer extends React.Component {
                                 goal =>
                                     <tr key={goal.goalId}>
                                         <td>{goal.goalName}</td>
-                                        <td>{Moment(goal.targetDate).format('MMMM Do YYYY')}</td>
+                                        <td>{Moment(goal.targetDate).format('MMMM YYYY')}</td>
                                         <td>${goal.initialDeposit}</td>
                                         <td>${goal.targetAmount}</td>
                                         <td>${goal.targetAmount - goal.initialDeposit}</td>

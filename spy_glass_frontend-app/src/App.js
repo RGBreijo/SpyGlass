@@ -24,6 +24,7 @@ function App() {
   const [displayCreateNewGoal, setDisplayCreateNewGoal] = useState(false);
   const [displayEditGoal, setDisplayEditGoal]           = useState(false);
   const [cancelClicked, setCancelClicked]               = useState(false);
+  const [reloadGoal, setReloadGoal]                     = useState(true);
 
 
   let [goalCardInfo, setGoalCardInfo] = useState(goalCard);
@@ -51,6 +52,8 @@ function App() {
     setCancelClicked(true);
     setDisplayEditGoal(false);
     setDisplayCreateNewGoal(false);
+    setReloadGoal(!reloadGoal);
+
   }
 
 
@@ -69,7 +72,8 @@ function App() {
         </div>
 
         <div className="mainGoalInfoContainer">
-          <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}></GoalContainer>
+           {!reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
+           {reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
         </div>
 
 

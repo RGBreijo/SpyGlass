@@ -49,9 +49,13 @@ class CreateGoal extends Component {
 
         GoalService.createGoal(goal).then(res => {
             this.setState({goals: res.data})
-            this.props.onCancel();
         });
+        
+        setTimeout(() => {
+             this.props.onCancel();
+          }, 200); 
     }
+
     render() {
             return (
                 <div className="createGoalContainer">

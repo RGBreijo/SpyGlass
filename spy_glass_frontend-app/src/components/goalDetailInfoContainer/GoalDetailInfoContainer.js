@@ -3,7 +3,12 @@ import "./GoalDetailInfoContainer.css";
 import GoalService from "../../GoalServices/GoalService";
 import Moment from 'moment';
 
-class GoalDetailInfoContainer extends React.Component {
+class GoalDetailInfoContainer extends React.Component 
+{
+ 
+
+     reload = 0; 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -11,14 +16,18 @@ class GoalDetailInfoContainer extends React.Component {
         }
     }
 
+    /*
+        Create a variable state called reload and a function that changes that variable state
+        when createGoal calles saves it will also call this reload function which will change the state
+        hence change the 
+    */
+
     componentDidMount() {
         GoalService.getGoals().then((response) => {
             this.setState({goals: response.data})
-
         })
     }
 
-    // Note: Each th was given the same class instead of putting
     render() {
         return (
             <div>

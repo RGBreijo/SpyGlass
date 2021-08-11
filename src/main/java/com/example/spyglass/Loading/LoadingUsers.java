@@ -19,7 +19,6 @@ public class LoadingUsers {
     @Bean
     CommandLineRunner initUserDB(UserRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(new User("Anta", "Anta@gmail.com")));
             log.info("Preloading " + repository.save(new User("Juan", "Juan@gmail.com")));
         };
     }

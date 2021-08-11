@@ -26,7 +26,7 @@ const Deposit = () =>
                 </div>
 
                 <div className="depositSubmit">
-                    <input type="submit" value="Deposite"/> 
+                    <input type="submit" value="Deposit"/> 
                 </div>
               
                 </form>

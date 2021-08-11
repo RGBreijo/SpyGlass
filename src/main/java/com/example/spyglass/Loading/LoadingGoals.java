@@ -52,7 +52,7 @@ public class LoadingGoals {
 
     @Bean
     CommandLineRunner initGoalDB(UserRepository repository, GoalRepository goalRepository) {
-        User user = new User("Anta", "Anta@gmail.com",null,25);
+        User user = new User("Anta", "Anta@gmail.com");
         goalList.add(goal1);
         goalList.add(goal2);
         goalList.add(goal3);

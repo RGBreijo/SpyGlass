@@ -7,7 +7,7 @@ const MainCreateComponentScreen = (props) =>
     return(
         <div className="createGoalSuperContainer">
             <div id="createGoalMainContainer">
-                <CreateGoal onCancel={props.onCancel}></CreateGoal>
+                <CreateGoal onCancel={props.onCancel} onSave={props.onSave}></CreateGoal>
             </div>
         </div>
     )

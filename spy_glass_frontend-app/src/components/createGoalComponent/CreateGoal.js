@@ -50,7 +50,7 @@ class CreateGoal extends Component {
         GoalService.createGoal(goal).then(res => {
             this.setState({goals: res.data})
             this.props.onCancel();
-        });
+        })
     }
     render() {
             return (

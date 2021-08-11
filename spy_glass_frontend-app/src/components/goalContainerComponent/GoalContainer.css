@@ -75,11 +75,11 @@
  @media only screen and (max-width: 1500px) {
     .goalContainer
     {
-        max-width: 65vw;
+        max-width: 67vw;
     } 
     .goalContainerTop
     {
-        max-height: 400px;
+        max-height: 390px;
     }
 
   }

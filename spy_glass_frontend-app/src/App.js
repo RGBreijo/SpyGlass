@@ -16,9 +16,10 @@ function App() {
         {
             goalId: -1,
             goalName: "",
-            goalDescription: "",
-            monthlyDeposit: 0.00,
-            targetDollarAmount: 0.00
+            reason: "",
+            monthlyDepo: 0.00,
+            targetAmount: 0.00,
+            targetDate:"",
 
         }
 
@@ -37,22 +38,25 @@ function App() {
         setCancelClicked(false);
     }
 
-    const editGoalBtnClicked = (id, goalName) =>
+    const editGoalBtnClicked = (id, goalName, reason, monthlyDepo,targetAmount, targetDate) =>
     {
         setDisplayEditGoal(true);
         setCancelClicked(false);
         goalCard.goalId = id;
         goalCard.goalName = goalName;
-
+        goalCard.reason = reason;
+        goalCard.monthlyDepo = monthlyDepo;
+        goalCard.targetAmount =  targetAmount;
+        goalCard.targetDate = targetDate;
         setGoalCardInfo(goalCard);
     }
 
 
-    const saveBtnClicked = () =>
-    {
-        cancelBtnClicked();
-        setReloadGoal(!reloadGoal);
-    }
+    // const saveBtnClicked = () =>
+    // {
+    //     cancelBtnClicked();
+    //     setReloadGoal(!reloadGoal);
+    // }
 
     const cancelBtnClicked = () =>
     {
@@ -64,7 +68,7 @@ function App() {
 
     return (
         <div className="outerContainer">
-            {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} onSave={saveBtnClicked}></MainCreateComponentScreen>}
+            {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} ></MainCreateComponentScreen>}
             {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo}></MainEditComponentScreen>}
 
             <div className="welcomeContainer">

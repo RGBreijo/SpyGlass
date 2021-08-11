@@ -27,9 +27,9 @@ class GoalCard extends Component {
         })
     }
 
-    clicked = (id, goalName) =>
+    clicked = (id, goalName, reason, monthlyDepo,targetAmount,targetDate) =>
     {
-        this.props.onEdit(id, goalName);
+        this.props.onEdit(id, goalName, reason, monthlyDepo,targetAmount,targetDate);
     }
 
     render() {
@@ -40,7 +40,7 @@ class GoalCard extends Component {
                         <div className="goalCard" key={goal.goalId}>
                             <div className="goalCardHeader">
                                 <h2>{goal.goalName}</h2>
-                                <p onClick={(id, goalName) => this.clicked(goal.goalId, goal.goalName)}>Edit</p>
+                                <p onClick={(id, goalName, reason, monthlyDepo, targetAmount, targetDate) => this.clicked(goal.goalId, goal.goalName, goal.reason, goal.monthlyDepo,goal.targetAmount,goal.targetDate)}>Edit</p>
                             </div>
 
                             <div className="goalCardInnerSection">

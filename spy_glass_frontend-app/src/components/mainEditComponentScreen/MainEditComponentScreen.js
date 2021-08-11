@@ -6,7 +6,7 @@ const MainEditComponentScreen = (props) =>
     return(
         <div className="createGoalSuperContainer">
             <div id="createGoalMainContainer">
-                <EditGoal onCancel={props.onCancel} cardInfo={props.cardInfo}></EditGoal>
+                <EditGoal onCancel={props.onCancel} cardInfo={props.cardInfo} onSave={props.onSave}></EditGoal>
             </div>
         </div>
     )

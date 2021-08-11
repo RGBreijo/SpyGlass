@@ -11,6 +11,10 @@ class GoalService {
     createGoal(newGoal){
         return axios.post( GOALS_REST_API_URL, newGoal)
     }
+
+    updateGoal(goal, goalId){
+        return axios.put(GOALS_REST_API_URL + "/" + goalId, goal)
+    }
 }
 
 export default new GoalService();

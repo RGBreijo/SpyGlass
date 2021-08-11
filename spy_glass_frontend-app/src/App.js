@@ -8,17 +8,17 @@ import React, {useState, useEffect} from 'react';
 import MainCreateComponentScreen from "./components/mainCreateComponentScreen/MainCreateComponentScreen"
 import MainEditComponentScreen from "./components/mainEditComponentScreen/MainEditComponentScreen"
 
-
 function App() {
 
 
   let goalCard = 
   {
     goalId: -1,
-    goalName: "", 
-    goalDescription: "", 
-    monthlyDeposit: 0.00, 
-    targetDollarAmount: 0.00
+    goalName: "",
+    reason: "",
+    monthlyDepo: 0.00,
+    targetAmount: 0.00,
+    targetDate:"",
 
   }
 
@@ -37,13 +37,16 @@ function App() {
       setCancelClicked(false);
   }
 
-  const editGoalBtnClicked = (id, goalName) => 
+  const editGoalBtnClicked = (id, goalName, reason, monthlyDepo,targetAmount, targetDate) => 
   {
     setDisplayEditGoal(true);
     setCancelClicked(false);
     goalCard.goalId = id;
     goalCard.goalName = goalName;
-
+    goalCard.reason = reason;
+    goalCard.monthlyDepo = monthlyDepo;
+    goalCard.targetAmount =  targetAmount;
+    goalCard.targetDate = targetDate;
     setGoalCardInfo(goalCard);
   }
 
@@ -65,7 +68,7 @@ function App() {
   return (
     <div className="outerContainer">
             {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} onSave={saveBtnClicked}></MainCreateComponentScreen>}
-            {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo}></MainEditComponentScreen>}
+            {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo} onSave={saveBtnClicked}></MainEditComponentScreen>}
 
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>

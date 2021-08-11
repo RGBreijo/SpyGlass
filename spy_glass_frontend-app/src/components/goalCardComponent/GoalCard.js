@@ -32,6 +32,23 @@ class GoalCard extends Component {
         this.props.onEdit(id, goalName, reason, monthlyDepo,targetAmount,targetDate);
     }
 
+    imagename(name) {
+        if (name === "Home") {
+            return "https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"
+        }
+        if (name === "Car") {
+            return "https://www.motortrend.com/uploads/sites/5/2021/07/2021-Tesla-Model-3_19-exterior-three-quarter-front-view.jpg"
+        }
+        if (name === "College Fall Semester") {
+            return "https://bha.aspirepublicschools.org/wp-content/uploads/sites/8/2017/10/college.jpg"
+        }
+        if (name === "Boat") {
+            return "https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/9984771-0-61152511.jpg"
+        }
+
+
+    }
+
     render() {
 
         return (
@@ -50,7 +67,7 @@ class GoalCard extends Component {
                                 <div clasName="goalImage">
                                     <br></br>
                                     <img alt="goal"
-                                         src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"></img>
+                                         src={this.imagename(goal.goalName)}></img>
                                 </div>
                             </div>
 

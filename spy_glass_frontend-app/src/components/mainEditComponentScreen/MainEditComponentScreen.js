@@ -11,5 +11,4 @@ const MainEditComponentScreen = (props) =>
         </div>
     )
 }
-
 export default MainEditComponentScreen

@@ -12,82 +12,85 @@ import MainEditComponentScreen from "./components/mainEditComponentScreen/MainEd
 function App() {
 
 
-  let goalCard = 
-  {
-    goalName: "", 
-    goalDescription: "", 
-    monthlyDeposit: 0.00, 
-    targetDollarAmount: 0.00
+    let goalCard =
+        {
+            goalId: -1,
+            goalName: "",
+            goalDescription: "",
+            monthlyDeposit: 0.00,
+            targetDollarAmount: 0.00
 
-  }
+        }
 
-  const [displayCreateNewGoal, setDisplayCreateNewGoal] = useState(false);
-  const [displayEditGoal, setDisplayEditGoal]           = useState(false);
-  const [cancelClicked, setCancelClicked]               = useState(false);
-  const [reloadGoal, setReloadGoal]                     = useState(true);
-
-
-  let [goalCardInfo, setGoalCardInfo] = useState(goalCard);
+    const [displayCreateNewGoal, setDisplayCreateNewGoal] = useState(false);
+    const [displayEditGoal, setDisplayEditGoal]           = useState(false);
+    const [cancelClicked, setCancelClicked]               = useState(false);
+    const [reloadGoal, setReloadGoal]                     = useState(true);
 
 
-  const createNewCardBtnClicked = () =>
-  {
-      setDisplayCreateNewGoal(true);
-      setCancelClicked(false);
-  }
-
-  const editGoalBtnClicked = (name) => 
-  {
-    setDisplayEditGoal(true);
-    setCancelClicked(false);
-    goalCard.goalName = name;
-    setGoalCardInfo(goalCard);
-  }
+    let [goalCardInfo, setGoalCardInfo] = useState(goalCard);
 
 
-  const saveBtnClicked = () =>
-  {
-    cancelBtnClicked();
-    setReloadGoal(!reloadGoal);
-  }
+    const createNewCardBtnClicked = () =>
+    {
+        setDisplayCreateNewGoal(true);
+        setCancelClicked(false);
+    }
 
-  const cancelBtnClicked = () =>
-  {
-    setCancelClicked(true);
-    setDisplayEditGoal(false);
-    setDisplayCreateNewGoal(false);
-  }
+    const editGoalBtnClicked = (id, goalName) =>
+    {
+        setDisplayEditGoal(true);
+        setCancelClicked(false);
+        goalCard.goalId = id;
+        goalCard.goalName = goalName;
+
+        setGoalCardInfo(goalCard);
+    }
 
 
-  return (
-    <div className="outerContainer">
+    const saveBtnClicked = () =>
+    {
+        cancelBtnClicked();
+        setReloadGoal(!reloadGoal);
+    }
+
+    const cancelBtnClicked = () =>
+    {
+        setCancelClicked(true);
+        setDisplayEditGoal(false);
+        setDisplayCreateNewGoal(false);
+    }
+
+
+    return (
+        <div className="outerContainer">
             {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} onSave={saveBtnClicked}></MainCreateComponentScreen>}
             {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo}></MainEditComponentScreen>}
 
-      <div className="welcomeContainer">
-        <h2>Welcome back, Bob.</h2>
-      </div>
-      <div className="mainContentContainer">
-        <div className="sideInputContainer">
-          <Deposit></Deposit>
-          <Boost></Boost>
+            <div className="welcomeContainer">
+                <h2>Welcome back, Bob.</h2>
+            </div>
+            <div className="mainContentContainer">
+                <div className="sideInputContainer">
+                    <Deposit></Deposit>
+                    <Boost></Boost>
+                </div>
+
+                <div className="mainGoalInfoContainer">
+                    {!reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
+                    {reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
+                </div>
+
+
+            </div>
+            <footer></footer>
+
+
+
+
+
         </div>
-
-        <div className="mainGoalInfoContainer">
-           {!reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
-           {reloadGoal && <GoalContainer onCreate={createNewCardBtnClicked} onEdit={editGoalBtnClicked}  onReload={reloadGoal}></GoalContainer>}
-        </div>
-
-
-      </div>
-      <footer></footer>
-
-
-
-
-
-    </div>
-  );
+    );
 }
 
 export default App;

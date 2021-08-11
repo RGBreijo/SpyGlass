@@ -38,6 +38,9 @@ public class User {
         this.email = email;
     }
 
+    public User(String anta, String s, Object o, int i) {
+    }
+
 
     @Override
     public String toString() {

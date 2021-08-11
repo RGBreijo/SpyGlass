@@ -38,6 +38,19 @@ public class Goal
         this.goalId = goalId;
     }
 
+    @Override
+    public String toString() {
+        return "Goal{" +
+                "goalName='" + goalName + '\'' +
+                ", reason='" + reason + '\'' +
+                '}';
+    }
+
+    public Goal(String goalName, String reason) {
+        this.goalName = goalName;
+        this.reason = reason;
+    }
+
     public String getReason() {
         return reason;
     }

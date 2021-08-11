@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Service talks to our Repo and tells it what to do
 @Service
 public class UserService
 {

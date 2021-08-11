@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-
+//Giving the user attributes it would need
 @Entity
 public class User {
 

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Controller handles the request made when the user interacts with the browser
 @CrossOrigin
 @RestController
 @RequestMapping("/users")

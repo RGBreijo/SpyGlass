@@ -14,6 +14,7 @@ function App() {
 
   let goalCard = 
   {
+    goalId: -1,
     goalName: "", 
     goalDescription: "", 
     monthlyDeposit: 0.00, 
@@ -36,11 +37,13 @@ function App() {
       setCancelClicked(false);
   }
 
-  const editGoalBtnClicked = (name) => 
+  const editGoalBtnClicked = (id, goalName) => 
   {
     setDisplayEditGoal(true);
     setCancelClicked(false);
-    goalCard.goalName = name;
+    goalCard.goalId = id;
+    goalCard.goalName = goalName;
+
     setGoalCardInfo(goalCard);
   }
 

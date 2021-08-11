@@ -3,6 +3,7 @@ import vanguard from "../images/vanguard.jpg"
 
 import React, {Component} from 'react';
 import GoalService from "../../GoalServices/GoalService";
+import localdate from 'localdate'
 
 class CreateGoal extends Component {
     constructor(props) {
@@ -56,12 +57,43 @@ class CreateGoal extends Component {
           }, 200); 
     }
 
+    isOnTrack(initialAmount, goalAmount, achieveByDate, monthlyDeposit){
+
+        let targetDate = new localdate(achieveByDate)
+        let today = new Date().toISOString().slice(0, 10);
+
+        let days = today.diff(targetDate) * -1;
+        let months = 0;
+
+        if (days % 30 != 0) {
+            months = months + Math.floor(days / 30)
+        }
+
+        let monthsNeeded = Math.floor((goalAmount - initialAmount) / monthlyDeposit)
+
+
+        if (monthsNeeded > months || days < 0) 
+        {
+            
+            return "False"
+        }
+        return "True"
+    }
+
+
+
+
+
+
+
+
+
     render() {
             return (
                 <div className="createGoalContainer">
 
                     <div className="createGoalHeaderContainer">
-                        <h2 id="createGoalTitle">Your Goal</h2>
+                        <h2 id="createGoalTitle">Create A Goal</h2>
                     </div>
                     <hr id="createDivider"></hr>
 

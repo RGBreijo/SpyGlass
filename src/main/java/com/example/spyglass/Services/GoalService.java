@@ -3,11 +3,12 @@ package com.example.spyglass.Services;
 
 import com.example.spyglass.Exceptions.GoalAlreadyExistsExeption;
 import com.example.spyglass.Exceptions.GoalNotFoundException;
-import com.example.spyglass.Model.Goal;
 import com.example.spyglass.Model.User;
 import com.example.spyglass.Repositories.GoalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.example.spyglass.Model.Goal;
+
 
 import java.util.List;
 

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/users/{username}/goals")
 public class GoalsController {
@@ -21,12 +20,11 @@ public class GoalsController {
         this.goalService = goalService;
     }
 
-
     @PostMapping
     @CrossOrigin
     public void creatGoal(@PathVariable String username, @RequestBody Goal newGoal) throws GoalAlreadyExistsExeption
     {
-        goalService.creatGoal(username, newGoal);
+         goalService.creatGoal(username, newGoal);
     }
 
     @GetMapping
@@ -41,19 +39,17 @@ public class GoalsController {
         return goalService.findGoal(goalId);
     }
 
-    @DeleteMapping("/{goalId}")
-    @CrossOrigin
-    public Boolean deleteGoal(@PathVariable Long goalId) throws GoalNotFoundException{
+   @DeleteMapping("/{goalId}")
+   @CrossOrigin
+   public Boolean deleteGoal(@PathVariable Long goalId) throws GoalNotFoundException{
         return goalService.deleteGoal(goalId);
-    }
+   }
 
-    @PutMapping("/{goalId}")
-    @CrossOrigin
-    public Boolean updateGoal(@PathVariable Long goalId, @RequestBody Goal updatedGoal) throws GoalNotFoundException{
+   @PutMapping("/{goalId}")
+   @CrossOrigin
+   public Boolean updateGoal(@PathVariable Long goalId, @RequestBody Goal updatedGoal) throws GoalNotFoundException{
         return goalService.updateGoal(goalId,updatedGoal);
 
-    }
-
-
+   }
 }
 

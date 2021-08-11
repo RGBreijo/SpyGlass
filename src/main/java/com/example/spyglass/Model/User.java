@@ -31,6 +31,14 @@ public class User {
         this.password = password;
         this.points = points;
     }
+
+    public User(String username, String email)
+    {
+        this.username = username;
+        this.email = email;
+    }
+
+
     @Override
     public String toString() {
         return "User{" +

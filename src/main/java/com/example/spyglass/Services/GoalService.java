@@ -3,17 +3,17 @@ package com.example.spyglass.Services;
 
 import com.example.spyglass.Exceptions.GoalAlreadyExistsExeption;
 import com.example.spyglass.Exceptions.GoalNotFoundException;
-import com.example.spyglass.Model.Goal;
 import com.example.spyglass.Model.User;
 import com.example.spyglass.Repositories.GoalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.example.spyglass.Model.Goal;
+
 
 import java.util.List;
 
 @Service
 public class GoalService {
-
 
     private final GoalRepository goalsRepo;
     private final UserService userService;
@@ -27,29 +27,25 @@ public class GoalService {
 
     public void creatGoal(String username, Goal newGoal) throws GoalAlreadyExistsExeption
     {
-        if (newGoal.getGoalId() != null){
-        if (goalsRepo.existsById(newGoal.getGoalId()))
+        if (newGoal.getGoalId() != null)
         {
-                throw new GoalAlreadyExistsExeption(newGoal.getGoalId());
-        }}
-
-        User user = userService.getUser(username);
-        if(user != null)
-        {
-           user.getGoals().add(newGoal);
-           newGoal.setUser(user);
-
-           userService.save(user);
-           goalsRepo.save(newGoal);
+            if (goalsRepo.existsById(newGoal.getGoalId()))
+            {
+                    throw new GoalAlreadyExistsExeption(newGoal.getGoalId());
+            }
         }
 
+            User user = userService.getUser(username);
+            if(user != null)
+            {
+               user.getGoals().add(newGoal);
+               newGoal.setUser(user);
+
+               userService.save(user);
+               goalsRepo.save(newGoal);
+            }
+
     }
-
-
-
-
-
-
 
     public List<Goal> getAllGoals(){
         return goalsRepo.findAll();
@@ -93,7 +89,7 @@ public class GoalService {
              oldGoal.setReason(updatedGoal.getReason());
              oldGoal.setTargetAmount(updatedGoal.getTargetAmount());
              oldGoal.setTargetDate(updatedGoal.getTargetDate());
-             oldGoal.setMonthlyDeposit(updatedGoal.getMonthlyDeposit());
+
              goalsRepo.save(oldGoal);
              return true;
         }}

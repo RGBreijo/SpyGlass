@@ -38,6 +38,12 @@ public class Goal
         this.goalId = goalId;
     }
 
+    public Goal(String goalName, String reason)
+    {
+        this.goalName = goalName;
+        this.reason = reason;
+    }
+
     public String getReason() {
         return reason;
     }

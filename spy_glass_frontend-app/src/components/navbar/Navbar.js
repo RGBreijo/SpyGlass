@@ -5,7 +5,7 @@ const Navbar = () =>
     return (
     <div className="navbar">
         <div>
-            <p className="mainLogo">Spy Glass</p>
+            <p className="mainLogo">Spyglass</p>
             <p className="mainLogoBottom">by Vanguard</p>
         </div>
     </div>)

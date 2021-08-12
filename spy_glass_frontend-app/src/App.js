@@ -7,7 +7,7 @@ import React, {useState, useEffect} from 'react';
 
 import MainCreateComponentScreen from "./components/mainCreateComponentScreen/MainCreateComponentScreen"
 import MainEditComponentScreen from "./components/mainEditComponentScreen/MainEditComponentScreen"
-
+import Navbar from "./components/navbar/Navbar"
 function App() {
 
 
@@ -69,7 +69,8 @@ function App() {
     <div className="outerContainer">
             {!cancelClicked && displayCreateNewGoal && <MainCreateComponentScreen onCancel={cancelBtnClicked} onSave={saveBtnClicked}></MainCreateComponentScreen>}
             {!cancelClicked && displayEditGoal && <MainEditComponentScreen onCancel={cancelBtnClicked} cardInfo={goalCardInfo} onSave={saveBtnClicked}></MainEditComponentScreen>}
-
+      
+      <Navbar></Navbar>
       <div className="welcomeContainer">
         <h2>Welcome back, Bob.</h2>
       </div>

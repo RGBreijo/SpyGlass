@@ -16,9 +16,6 @@ const Boost = () =>
                         <label>Choose an ETF</label>
                         <select id="cars" name="cars">
                             <option value="volvo">Extended Duration Treasury $143.56</option>
-                            <option value="saab">Saab 95</option>
-                            <option value="mercedes">Mercedes SLK</option>
-                            <option value="audi">Audi TT</option>
                         </select>
                     </div>
                     

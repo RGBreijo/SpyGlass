@@ -42,11 +42,11 @@ public class LoadingGoals {
     Date date1 = sdf.parse("2021/10/06");
     Date date2 = sdf.parse("2052/6/06");
     Date date3 = sdf.parse("2022/1/20");
-    Goal goal1 = new Goal("Car", "I can finally buy myself a car since I'm not changing locations every other month.",date1, 7000,2000,500,1L);
-    Goal goal2 = new Goal("Home", "After these 5 past years of exploring the world. I think I'm finally ready to settle down." +
-            "First things first, I'm going to need a house if I'm going down this route.",date2, 270000,40000,1250, 2L);
-    Goal goal3 = new Goal("One Semester", "If im going to be settling down here i want to make that moolah so i can live comfortably" +
-            ". So I'm going back to school to finish my Computer Science bachelor's  degree.",date3,8000,2000,500,3L);
+    Goal goal1 = new Goal("Car", "I will get a more fuel efficient car that will allow me to go on more trips and has a cheaper repair cost.",date1, 7000,3000,500,1L);
+    Goal goal2 = new Goal("Home", "After these 5 past years of exploring the world I think I'm finally ready to settle down." +
+            "I'm going to need a house if I'm going down this route.",date2, 270000,40000,1250, 2L);
+    Goal goal3 = new Goal("College", "I am going to college so I can increase my chances of getting a job "
+            ,date3,8000,2000,500,3L);
 
 
 

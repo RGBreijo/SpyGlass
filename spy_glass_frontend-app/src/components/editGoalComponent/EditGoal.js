@@ -61,7 +61,7 @@ class EditGoal extends Component {
             <div className="createGoalContainer">
 
                 <div className="createGoalHeaderContainer">
-                    <h2 id="createGoalTitle">Your Goal</h2>
+                    <h2 id="createGoalTitle">Edit Your Goal</h2>
                 </div>
                 <hr id="createDivider"></hr>
 

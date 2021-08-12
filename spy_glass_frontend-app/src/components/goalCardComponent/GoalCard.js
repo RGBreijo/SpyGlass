@@ -50,7 +50,7 @@ class GoalCard extends Component {
                                 <div clasName="goalImage">
                                     <br></br>
                                     <img alt="goal"
-                                         src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"></img>
+                                         src="https://www.evidenceinvestor.com/wp-content/uploads/2018/06/vanguard.jpg"></img>
                                 </div>
                             </div>
 

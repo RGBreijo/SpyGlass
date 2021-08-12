@@ -11,15 +11,14 @@ const Deposit = () =>
                     <div className="depositeUserDate">
                         <label for="cars">Choose a Goal</label>
                         <select id="cars" name="cars">
-                            <option value="volvo">House</option>
-                            <option value="saab">Car</option>
-                            <option value="mercedes">Vacation</option>
-                            <option value="audi">Phone</option>
+                            <option value="volvo">Car</option>
+                            <option value="saab">Home</option>
+                            <option value="mercedes">College</option>
                         </select>
                     </div>
                     
                     <div className="depositeUserDate">
-                        <label for="cars" >Amount</label>
+                        <label for="cars">Amount</label>
                         <input type="text" placeholder="100.00"/>
                     </div>
 

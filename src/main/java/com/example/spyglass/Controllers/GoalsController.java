@@ -24,7 +24,7 @@ public class GoalsController {
     @CrossOrigin
     public void creatGoal(@PathVariable String username, @RequestBody Goal newGoal) throws GoalAlreadyExistsExeption
     {
-         goalService.creatGoal(username, newGoal);
+         goalService.createGoal(username, newGoal);
     }
 
     @GetMapping

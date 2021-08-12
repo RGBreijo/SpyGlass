@@ -25,7 +25,7 @@ public class GoalService {
         this.userService = userService;
     }
 
-    public void creatGoal(String username, Goal newGoal) throws GoalAlreadyExistsExeption
+    public void createGoal(String username, Goal newGoal) throws GoalAlreadyExistsExeption
     {
         if (newGoal.getGoalId() != null)
         {
